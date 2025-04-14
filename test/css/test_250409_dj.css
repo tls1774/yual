@@ -2,24 +2,24 @@
 body {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
-.wrapper{
+.wrapper {
     width: 1260px;
     margin: 0 auto;
 }
-/* 와일드 카드 - 모든 태그 전체 */
+/* 와일드 카드 - 태그 전체 */
 * {
     margin: 0;
     padding: 0;
 }
 .about {
-background-image: url(../images/about_bg.png);
-height: 480px;
-background-repeat: no-repeat;
-background-position: center center;
-color: #ffffff;
-text-align: center;
+    background-image: url(../images/about_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 560px;
+    color: #ffffff;
+    text-align: center;
 }
 .about h1 {
     font-size: 60px;
-    padding: 119px 0 33px 0;
+    padding: 190px 0 15px 0;
 }

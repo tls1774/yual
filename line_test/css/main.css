@@ -1,0 +1,112 @@
+/* html파일에서는 main.css만 호출, 
+   다른 필요한 css는 main.css가 부름 */
+@import url(font.css);
+body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1d1d1d;
+    word-break: keep-all;
+}
+
+/* START :: 태그의 기본 스타일 삭제(초기화) */
+* {
+    margin: 0; /* 브라우저가 기본으로 주는 여백 삭제 */
+    padding: 0;
+    box-sizing: border-box;
+    /* width/height와 padding을 같이주면 사이즈가 늘어남 - 이 현상을 막는 속성 */
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+    /* inherit가 브라우저가 주는 값 말고 내가 선언한 값만 상속받아 */
+}
+strong {
+    font-weight: inherit;
+}
+li {
+    list-style: none; /* li 앞에 동그라미 삭제 */
+}
+a {
+    color: inherit;
+    text-decoration: none; /* 밑줄삭제 */
+}
+/* END :: 태그 스타일의 초기화 */
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.line1 h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 118px 0 0 0;
+}
+.line1 .sub_tit {
+    color: #00b900;
+}
+.line1 p {
+    margin: 10px 0 0 0;
+    color: #555555;
+}
+.line1 .more a {
+    border: 1px solid #00b900;
+    padding:6px 28px 6px 28px;
+    display: inline-block;
+    color: #00b900;
+    
+}
+.line1 .photo {
+    margin: 43px 0 0 0;
+}
+.line1 .more {
+    margin: 30px 0 0 0;
+}
+
+
+.line2 .wrapper {
+    text-align: center;
+
+}
+.line2 h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    padding: 108px 0 0 0;
+    margin: 0 0 20px 0;
+}
+.line2 .sub_tit {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.line2 {
+    background-image: url(../images/gra_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /*배경꽉채우기*/
+    height: 640px;
+    color: #fff;
+    margin: 100px 0 0 0;
+}
+.line2 .photo {
+    margin: 43px 0 0 0;
+}
+.line2 .more{
+    margin: 0 0 0 0;
+}
+
+.line2 .more a{
+    margin: 41px 0 0 0;
+    color: #fff;
+    border: 1px solid #fff;
+    padding:7px 25px 7px 25px
+}
