@@ -124,10 +124,122 @@ header .inner .shop {
     margin: 60px 0 0 0;
 }
 
+.community {
+    margin: 155px 0 0 0;
+}
+.community .tit h2 {
+    color: #317039;
+}
+.community .tit p {
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+    letter-spacing: -0.03em;
+    margin: 7px 0 0 0;
+}
+.community .list {
+    margin: 53px 0 0 0;
+    display: flex; /* group을 좌우로배치*/
+    justify-content: space-between; /* 양쪽끝에배치 */
+}
+.community .list .group {
+    width: calc(50% - 6px);
+    /*
+        몇 등분으로 분할 : 2개 = 100/2 = 50% 
+        사이 여백의 총합 / 분할하는 갯수로 나눔 = 12 / 2 = 6px 
+    */
+}
+.community .list .group ul {
+    display: flex; /*li를 좌우로배치*/
+    flex-wrap: wrap; /*li가 2줄로 나타나는 걸 허락*/
+    gap: 12px;
+}
 
+/*
+    1.li의 사이즈와 a의 사이즈가 동일해야 할 때 
+    2.height를 꼭 줘야 하는 디자인일 때 (위에 product는 높이가 필요없는 디자인)
+    -- li에는 넓이를 주고 a에는 높이를 줌 
+*/
+.community .list .group ul li.color,
+.community .list .group ul li.gray {
+    width: calc(50% - 6px);
+}
+.community .list .group ul li.color a,
+.community .list .group ul li.gray a {
+    height: 231px;
+}
+.community .list .group ul li.color.bg1 a {
+    background-color: #317039;
+    color: #fff;
+}
+.community .list .group ul li.color.bg2 a {
+    background-color: #DD5D36;
+    color: #fff;
+}
+.community .list .group ul li.gray a{
+    background-color: #F4F4F4;
+}
+.community .list .group ul li.review {
+    width: 100%;
+    /* 나를 감싸는 요소 ul의 넓이의 100%가 들어감 */
+}
+.community .list .group ul li.review a {
+    height: 369px;
+    color: #fff;
+}
+.community .list .group ul li a {
+    padding: 0 24px 18px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.community .list .group ul li a h3 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 3px 0 17px 0;
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.community .list .group ul li a .date {
+    display: flex;
+    gap: 20px;
+}
+.community .list .group ul li.color a .date,
+.community .list .group ul li.review a .date {
+    color: rgba(255,255,255,0.8);
+}
+.community .list .group ul li.gray a .date {
+    color: #666;
+}
 
-
+.community .list .group ul li.review.bg1 a {
+    background: url(../images/community_bg1.jpg)no-repeat center center / cover;
+}
+.community .list .group ul li.review.bg2 a {
+    background: url(../images/community_bg2.jpg)no-repeat center center / cover;
+}
 
 footer {
-    margin: 400px 0 0 0;
+    border-top: 1px solid #A7A7A7;
+    padding: 54px 0 106px 0;
+    color:#555555;
+    margin: 141px 0 0 0;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 40px;
+}
+footer .f_info {
+    margin: 47px 0 20px 0;
+}
+footer .f_info .group {
+    display: flex;
+    gap: 40px;
+    
+}
+footer .copyright {
+    color: #a7a7a7
 }
