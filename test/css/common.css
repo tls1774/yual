@@ -14,6 +14,7 @@ body {
     width: 1260px; /* 내 디자인 파일 레이아웃 가이드 넓이 */ 
     margin: 0 auto; /* 브라우저에 가운데 정렬 */
 }
+
 #wrap { /*홈페이지 전체를 감싸는 요소*/
    min-width: 1320px;
    /* wrapper의 사이즈 + 좌우에 줄 최소여백 (가로스크롤바가 생겼을 때 콘텐츠  좌우여백 
@@ -21,4 +22,15 @@ body {
    */
    position: relative;
    /* header가 wrap을 기준으로 정렬하기 위해서 */
+}
+.blind {
+   /*html 표준에 따르자면 글자를 써야하는데 디자인에는 글자가 없어서 
+   글자를 없애는 클래스 */
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  color: transparent;
 }
