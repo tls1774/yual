@@ -389,6 +389,85 @@ header .tnb a.icon03::before {
     border-radius: 10px;
     background-color: rgba(0, 30, 69, 0.8);
     backdrop-filter: blur(10px);
+    padding: 43px 47px 0 43px;
+    /*높이로 제한 중이라 하단여백 안줌 */
+    position: relative;
+}
+.community .inner .notice:hover {
+    background-color: #033E8A;
+}
+.community .inner .notice h3{
+    font-size: 22px;
+    font-weight: 800;
+}
+.community .inner .notice .list {
+    margin: 28px 0 0 0;
+}
+.community .inner .notice .list ul li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+.community .inner .notice .list ul li:first-child {
+    border-top: 0;
+}
+.community .inner .notice .list ul li a {
+    display: flex; /* strong span을 좌우배치 */
+    justify-content: space-between;
+    padding: 9px 0 9px 0;
+}
+.community .inner .notice .list ul li a strong {
+    width: calc(100% - 90px);
+    /* 100%에서 
+       옆에 날짜 넓이 + 둘사이여백을 뺌
+       
+       1줄제한*/
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       color: #91E0EF;
+}
+.community .inner .notice .list ul li a:hover strong  {
+    font-weight: 800;
+}
+.community .inner .notice .list ul li a span {
+    width: 80px;
+    font-size: 15px;
+    /* 날짜는 자리수가 늘지 않음 
+       날짜표시는 대부분 01 02 로 함 
+       25-1-1 이렇게 표시하면 자릿수가 변동됨 
+       그래서 날짜표기는 25-01-01 이렇게 표기 - 자릿수를 변동시키지 않기 위해
+       */ 
+    color: rgba(255,255,255,0.8);
+}
+.community .inner .notice .more {
+    position: absolute; /* notice를 기준으로 정렬 ,after 정렬의 기준 */
+    font-size: 13px;
+    right: 48px;
+    top: 50px;
+    padding: 0 18px 0 0; /* 아이콘을 배치할 영역까지 more로 잡혀야함 */
+    color: rgba(255,255,255,0.9);
+}
+.community .inner .notice .more::after {
+    content: "";
+    position: absolute; /* more를 기준으로 */
+    right: 0;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_1193' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='17' height='17'%3E%3Crect width='17' height='17' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_1193)'%3E%3Cpath d='M7.7915 9.20866H4.24984C4.04914 9.20866 3.88091 9.14078 3.74515 9.00501C3.60939 8.86925 3.5415 8.70102 3.5415 8.50033C3.5415 8.29963 3.60939 8.1314 3.74515 7.99564C3.88091 7.85987 4.04914 7.79199 4.24984 7.79199H7.7915V4.25033C7.7915 4.04963 7.85939 3.8814 7.99515 3.74564C8.13091 3.60987 8.29914 3.54199 8.49984 3.54199C8.70053 3.54199 8.86876 3.60987 9.00453 3.74564C9.14029 3.8814 9.20817 4.04963 9.20817 4.25033V7.79199H12.7498C12.9505 7.79199 13.1188 7.85987 13.2545 7.99564C13.3903 8.1314 13.4582 8.29963 13.4582 8.50033C13.4582 8.70102 13.3903 8.86925 13.2545 9.00501C13.1188 9.14078 12.9505 9.20866 12.7498 9.20866H9.20817V12.7503C9.20817 12.951 9.14029 13.1193 9.00453 13.255C8.86876 13.3908 8.70053 13.4587 8.49984 13.4587C8.29914 13.4587 8.13091 13.3908 7.99515 13.255C7.85939 13.1193 7.7915 12.951 7.7915 12.7503V9.20866Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.community .inner .notice .more:hover {
+    font-weight: 800;
+}
+.community .inner .notice .more:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 5px);
+    height: 1px;
+    background-color: rgba(255,255,255,0.3);
 }
 .community .inner .link {
     width: 310px;
@@ -416,6 +495,9 @@ header .tnb a.icon03::before {
     font-weight: 800;
     position: relative; /* after 정렬의 기준 */
 }
+.community .inner .link ul li a:hover {
+    background-color: #033E8A;
+}
 .community .inner .link ul li a::after {
     content: "";
     position: absolute;
@@ -437,11 +519,42 @@ header .tnb a.icon03::before {
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_1202' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_1202)'%3E%3Cpath d='M2.5 27.5C3.10417 25.9583 3.50521 24.3698 3.70312 22.7344C3.90104 21.099 4.02083 19.4583 4.0625 17.8125C3.25 17.5 2.57812 16.9792 2.04688 16.25C1.51562 15.5208 1.25 14.6875 1.25 13.75V11.25C3.64583 10.4583 6.08854 9.25 8.57812 7.625C11.0677 6 13.2083 4.29167 15 2.5C16.7917 4.29167 18.9323 6 21.4219 7.625C23.9115 9.25 26.3542 10.4583 28.75 11.25V13.75C28.75 14.6875 28.4844 15.5208 27.9531 16.25C27.4219 16.9792 26.75 17.5 25.9375 17.8125C25.9792 19.4583 26.099 21.099 26.2969 22.7344C26.4948 24.3698 26.8958 25.9583 27.5 27.5H2.5ZM7.375 11.25H22.625C21 10.3333 19.5365 9.39063 18.2344 8.42188C16.9323 7.45312 15.8542 6.60417 15 5.875C14.1458 6.60417 13.0677 7.45312 11.7656 8.42188C10.4635 9.39063 9 10.3333 7.375 11.25ZM18.125 15.625C18.6458 15.625 19.0885 15.4427 19.4531 15.0781C19.8177 14.7135 20 14.2708 20 13.75H16.25C16.25 14.2708 16.4323 14.7135 16.7969 15.0781C17.1615 15.4427 17.6042 15.625 18.125 15.625ZM11.875 15.625C12.3958 15.625 12.8385 15.4427 13.2031 15.0781C13.5677 14.7135 13.75 14.2708 13.75 13.75H10C10 14.2708 10.1823 14.7135 10.5469 15.0781C10.9115 15.4427 11.3542 15.625 11.875 15.625ZM5.625 15.625C6.14583 15.625 6.58854 15.4427 6.95312 15.0781C7.31771 14.7135 7.5 14.2708 7.5 13.75H3.75C3.75 14.2708 3.93229 14.7135 4.29688 15.0781C4.66146 15.4427 5.10417 15.625 5.625 15.625ZM5.8125 25H9.15625C9.34375 23.75 9.48958 22.5104 9.59375 21.2812C9.69792 20.0521 9.78125 18.8125 9.84375 17.5625C9.65625 17.4583 9.46875 17.349 9.28125 17.2344C9.09375 17.1198 8.91667 16.9792 8.75 16.8125C8.4375 17.125 8.09896 17.3802 7.73438 17.5781C7.36979 17.776 6.97917 17.9271 6.5625 18.0312C6.52083 19.2188 6.44792 20.3906 6.34375 21.5469C6.23958 22.7031 6.0625 23.8542 5.8125 25ZM11.6875 25H18.3125C18.1458 23.8542 18.0156 22.7083 17.9219 21.5625C17.8281 20.4167 17.75 19.2604 17.6875 18.0938C17.1458 18.0521 16.651 17.9219 16.2031 17.7031C15.7552 17.4844 15.3542 17.1979 15 16.8438C14.6458 17.1979 14.2344 17.4844 13.7656 17.7031C13.2969 17.9219 12.8125 18.0521 12.3125 18.0938C12.25 19.2604 12.1719 20.4167 12.0781 21.5625C11.9844 22.7083 11.8542 23.8542 11.6875 25ZM20.8438 25H24.1875C23.9375 23.8542 23.7604 22.7031 23.6563 21.5469C23.5521 20.3906 23.4792 19.2188 23.4375 18.0312C23.0208 17.9271 22.625 17.776 22.25 17.5781C21.875 17.3802 21.5417 17.125 21.25 16.8125C21.0833 16.9792 20.9062 17.1198 20.7188 17.2344C20.5312 17.349 20.3438 17.4583 20.1562 17.5625C20.2188 18.8125 20.3073 20.0521 20.4219 21.2812C20.5365 22.5104 20.6771 23.75 20.8438 25ZM24.375 15.625C24.8958 15.625 25.3385 15.4427 25.7031 15.0781C26.0677 14.7135 26.25 14.2708 26.25 13.75H22.5C22.5 14.2708 22.6823 14.7135 23.0469 15.0781C23.4115 15.4427 23.8542 15.625 24.375 15.625Z' fill='%2391E0EF'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
-
-
-
-
-
 footer {
-    margin: 400px 0 0 0;
+    padding: 54px 0 73px 0;
+    background-color: #00002A;
+    color: #fff;
+}
+footer .f_nav ul{
+    display: flex;
+    gap: 42px;
+}
+footer .f_nav ul li {
+    position: relative /*before 정렬의 기준 */;
+}
+footer .f_nav ul li::before {
+    content: "";
+    position: absolute; /* li를 기준으로 정렬 */
+    left: -20px;
+    top: 5px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(255,255,255,0.2);
+}
+footer .f_nav ul li:first-child::before {
+    display: none; /*숨김*/
+}
+footer .f_nav ul li a:hover {
+    text-decoration: underline;
+}
+footer .f_info {
+    margin: 33px 0 33px 0;
+    display: flex;
+    gap: 36px;
+}
+footer .copyright p {
+    margin: 8px 0 0 0;
+    color: rgba(255,255,255,0.6);
+}
+footer .copyright p strong {
+    text-decoration: underline;
 }
