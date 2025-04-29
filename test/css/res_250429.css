@@ -150,6 +150,47 @@
                         transform: rotate(360deg);
                     }
 }
+.global {
+    margin: 222px 0 0 0;
+}
+.global .wrapper {
+    display: flex; 
+    justify-content: space-between;
+}
+.global .txt {
+    width: calc(50% - 12px);
+    /*2개니까 50%에 둘 사이 여백의 절반*/
+    padding: 39px 0;
+    /*왼쪽 글자의 높이에서 padding만큼 오른쪽 이미지가 늘어남 */
+}
+.global .txt h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 0 0 62px 0;
+    position: relative; /* after 정렬의 기준 */
+}
+.global .txt h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -44px;
+    width: 107px;
+    height: 1px;
+    background-color: #ccc;
+}
+.global .photo {
+    width: calc(50% - 12px);
+    overflow: hidden;
+    border-radius: 20px;
+}
+.global .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 body {
     margin: 0 0 400px 0;
 }
