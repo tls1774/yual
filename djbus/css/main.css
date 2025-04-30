@@ -1,0 +1,298 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    display: block;
+    padding: 0 23px 0 23px;
+    line-height: 100px;
+    color: #1D1D1D;
+    font-size: 22px;
+    letter-spacing: -0.05em;
+    position: relative; /* after 정렬의 기준 */
+}
+header .gnb ul li a:hover { /* a에게 마우스를 올렸을때 */
+    color: #255698;
+    font-weight: 800;
+}
+
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+}
+.visual h2 {
+    padding: 291px 0 5px 0;
+    display: block;
+}
+.visual p {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.int {
+    margin: 136px 0 0 0;
+}
+.int .group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.int .group .inner {
+    width: 511px;
+}
+.int .group .inner h2 {
+    color: #255698;
+}
+.int .group.txt_left .inner h2 {
+    margin: 76px 0 8px 0;
+}
+.int .group.txt_right .inner h2 {
+    margin: 104px 0 8px 0;
+}
+.int .group .inner .main_tit {
+    font-size: 40px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+}
+.int .group .inner .main_tit strong {
+    color: #255698;
+}
+.int .group .inner .sub_tit {
+    font-size: 20px;
+    margin: 8px 0 14px 0;
+}
+.int .group .inner .btn_wrap {
+    margin: 54px 0 0 0;
+    display: flex;
+    /* a태그가 inline태그라서 좌우로 배치되지만
+       중간에 space 한칸의 여백이 존재함
+       이를 없애고 내가 디자인한대로 정확하게 여백주려고 */
+}
+.int .group .inner .btn_wrap a {
+    color: #255698;
+    border: 1px solid #255698;
+    padding: 12px 29px 12px 29px;
+    border-radius: 25px;
+    display: inline-block;
+    /* a태그에 display:block; inline-block 필수   */
+    margin: 0 10px 0 0;
+}
+/* a태그 중에서 point 클래스를 갖은 a */
+.int .group .inner .btn_wrap a.point {
+    background-color: #255698;
+    color: #fff;
+}
+.int .group .inner .btn_wrap a:hover {
+    border-color: #229EA0;
+    background-color: #229EA0;
+    color: #fff;
+}
+.int .group .photo {
+    overflow: hidden;/* photo가 지정한 영역 밖에 나가는 요소는 숨김 */
+    border-radius: 30px;
+    /* 이미지 하단에 여백 */
+    font-size: 0;
+    line-height: 0;
+}
+/****************************/
+.news {
+    height: 727px;
+    background: url(../images/news_bg.jpg)  no-repeat center center / cover;
+    color: #fff;
+    margin: 108px 0 0 0;
+}
+.news .wrapper {
+     position: relative;
+}
+.news .wrapper .tit  {
+    padding: 140px 0 0 0;
+}
+.news .wrapper .tit h2 {
+    margin: 0 0 3px 0;
+}
+.news .wrapper .tit p {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    
+}
+.news .list ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0 0 0;
+}
+.news .list ul li {
+    width: 297px;
+    height: 167px;
+    border-radius: 10px;
+    background-color: rgba(217, 217, 217, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 20px 55px 0 24px;
+    /*높이로 제한 중이라 하단여백 안줌 */
+    position: relative;
+}
+.news .list ul li a {
+    display: block;
+}
+.news .list ul li h3 {
+   margin: 0 0 68px 0;
+}
+.news .list ul li p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6) ;
+}
+.news .list ul li span {
+    margin: 10px 0 0 0;
+}
+
+.news .more {
+    font-size: 13px;
+    position: absolute; /* wrapper */
+    right: 0;
+    top: 228px;
+    color: #fff;
+    padding: 2px 35px 3px 19px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+.news .more::after {
+    content: ""; /* more를 기준으로 정렬 */
+    position: absolute; 
+    right: 14px;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_114_34' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_114_34)'%3E%3Cpath d='M7.33301 8.66658H3.99967C3.81079 8.66658 3.65245 8.6027 3.52467 8.47492C3.3969 8.34714 3.33301 8.18881 3.33301 7.99992C3.33301 7.81103 3.3969 7.6527 3.52467 7.52492C3.65245 7.39714 3.81079 7.33325 3.99967 7.33325H7.33301V3.99992C7.33301 3.81103 7.3969 3.6527 7.52467 3.52492C7.65245 3.39714 7.81079 3.33325 7.99967 3.33325C8.18856 3.33325 8.3469 3.39714 8.47467 3.52492C8.60245 3.6527 8.66634 3.81103 8.66634 3.99992V7.33325H11.9997C12.1886 7.33325 12.3469 7.39714 12.4747 7.52492C12.6025 7.6527 12.6663 7.81103 12.6663 7.99992C12.6663 8.18881 12.6025 8.34714 12.4747 8.47492C12.3469 8.6027 12.1886 8.66658 11.9997 8.66658H8.66634V11.9999C8.66634 12.1888 8.60245 12.3471 8.47467 12.4749C8.3469 12.6027 8.18856 12.6666 7.99967 12.6666C7.81079 12.6666 7.65245 12.6027 7.52467 12.4749C7.3969 12.3471 7.33301 12.1888 7.33301 11.9999V8.66658Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+} 
+
+.video {
+   background: #f7f7f7  no-repeat center center / cover;
+   height: 832px;
+}
+.video .wrapper {
+    position: relative;
+}
+.video .tit h3 {
+    color: #229EA0;
+    padding: 140px 0 12px 0;
+}
+.video .tit p {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.video .list {
+    margin: 41px 0 0 0;
+}
+.video ul {
+    display: flex;
+    justify-content: space-between;
+}
+.video .list ul li a {
+    display: block;
+}
+.video .list ul li a h3 {
+    margin: 17px 0 7px 0;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.video .more {
+    font-size: 13px;
+    position: absolute; /* wrapper */
+    right: 0;
+    top: 228px;
+    color: #229EA0;
+    padding: 2px 35px 3px 19px;
+    border: 1px solid #229EA0;
+    border-radius: 25px;
+}
+.video .more::after {
+    content: ""; /* more를 기준으로 정렬 */
+    position: absolute; 
+    right: 14px;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_114_151' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_114_151)'%3E%3Cpath d='M7.33301 8.66658H3.99967C3.81079 8.66658 3.65245 8.6027 3.52467 8.47492C3.3969 8.34714 3.33301 8.18881 3.33301 7.99992C3.33301 7.81103 3.3969 7.6527 3.52467 7.52492C3.65245 7.39714 3.81079 7.33325 3.99967 7.33325H7.33301V3.99992C7.33301 3.81103 7.3969 3.6527 7.52467 3.52492C7.65245 3.39714 7.81079 3.33325 7.99967 3.33325C8.18856 3.33325 8.3469 3.39714 8.47467 3.52492C8.60245 3.6527 8.66634 3.81103 8.66634 3.99992V7.33325H11.9997C12.1886 7.33325 12.3469 7.39714 12.4747 7.52492C12.6025 7.6527 12.6663 7.81103 12.6663 7.99992C12.6663 8.18881 12.6025 8.34714 12.4747 8.47492C12.3469 8.6027 12.1886 8.66658 11.9997 8.66658H8.66634V11.9999C8.66634 12.1888 8.60245 12.3471 8.47467 12.4749C8.3469 12.6027 8.18856 12.6666 7.99967 12.6666C7.81079 12.6666 7.65245 12.6027 7.52467 12.4749C7.3969 12.3471 7.33301 12.1888 7.33301 11.9999V8.66658Z' fill='%23229EA0'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #202020;
+    padding: 68px 0 78px 0;
+    color: rgba(255,255,255,0.8);
+    margin: 0 0 0 0;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 41px;
+}
+footer .f_nav ul li {
+    position: relative; /* after 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    content: ""; /* 필수 */
+    position: absolute; /* li를 기준으로 정렬 */
+    right: -21px;
+    top: 5px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.3);
+}
+/* li중에서 마지막 li의 after가 숨김처리 */
+footer .f_nav ul li:last-child::after {
+    display: none; /* 숨김 */
+}
+footer .f_nav ul li a {
+    display: block;
+}
+footer .f_nav ul li a:hover {
+    text-decoration: underline; /* 밑줄 */
+}
+footer .f_info {
+    margin: 35px 0 30px 0;
+}
+footer .f_info span {
+    margin: 0 16px 0 0;
+}
+footer .copyright {
+    color: rgba(255,255,255,0.6);
+}
