@@ -227,98 +227,67 @@ header .tnb .lang {
     background-position: center center;
     background-repeat: no-repeat;
 }
-
-/*******************오버 했을 때**********************/
-.project .list ul li a:hover .photo::before {
-    opacity: 0.9;
-}
-.project .list ul li a:hover .txt p {
-    display: block; /*none으로 숨긴건 흔히 display block으로 보이게함 */
-}
-.project .list ul li a:hover .txt span {
-    display: inline-block;
-}
-
+@media screen and (min-width:641px){
+            /*******************오버 했을 때**********************/
+            .project .list ul li a:hover .photo::before {
+                opacity: 0.9;
+            }
+            .project .list ul li a:hover .txt p {
+                display: block; /*none으로 숨긴건 흔히 display block으로 보이게함 */
+            }
+            .project .list ul li a:hover .txt span {
+                display: inline-block;
+            }
+}/*@media*/
 @media screen and (max-width:640px){
                     
                 .project {
                     margin: 73px 0 0 0;
                 }
                 .project .wrapper {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start; /* tit의 높이를 존재하는 만큼만 주기 위해서 */
+                    display: block; /* flex 해제 */
                 }
                 .project .tit {
-                    position: sticky; /* 감싸는 wrapper를 기준으로 정렬 무조건 */
-                    top: 20px;
-                    /* 좌우 정렬값 주면 안됨... top값은 상단에 고정되었을 때 위치값 
-                        stickt의 단점
-                        감싸는 요소 중에 단 한 개라도 ovverflow:hidden;값을 가지고 있으면
-                        적용안됨. 사실상 못쓴다고 생각하면 됩니다*/
+                    position: relative; /* sticky를 해제하기 위해서 다른 속성을 줌  */
+                    top: auto; /* top값을 지정하지 않은 것 처럼 취소하는 값  0 이랑 다름 */
                 }
                 .project .tit h2 {
-                    color: #021C8B;
-                    margin: 0 0 8px 0;
+                    margin: 0 0 10px 0;
                 }
                 .project .list {
-                    width: 52.85%; /* 666/1260*100 */
-                    margin: 174px 0 0 0;
+                    width: auto; /* block요소 이기 때문에 100% 들어감  */
+                    margin: 35px 0 0 0;
                 }
                 .project .list ul {
-                    display: flex;
-                    flex-wrap: wrap; /*2줄이상 허용*/
-                    gap: 24px 24px;
+                    gap: 16px 16px;
                 }
                 .project .list ul li {
-                    width: calc(50% - 12px);
+                    width: calc(50% - 8px);
                     /* 100% / 한줄에 보일 li 갯수 = 100%/2 = 50%
-                    한줄에 있는 여백의 총합 / 한줄에 보일 li 갯수 = 24px/2 = 12px*/
+                    한줄에 있는 여백의 총합 / 한줄에 보일 li 갯수 = 16px/2 = 8px*/
                 }
                 .project .list ul li:nth-child(even) {
                     /* even: 짝수 , odd: 홀수 */
-                    transform: translateY(-175PX);
+                    transform: none; /* 짝수 위로 이동한거 취소 */
                 }
-                .project .list ul li a {
-                    display: block;
-                    position: relative; /* txt 정렬의 기준 */
-                }
-
                 .project .list ul li a .photo {
-                    overflow: hidden;
-                    border-radius: 10px;
-                    height: 485px;
-                    position: relative; /* before 정렬의 기준 */
-                }
-                .project .list ul li a .photo::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: #021C8B;
-                    opacity: 0;
-                    transition: 0.2s;
-                } 
-                .project .list ul li a .photo img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    border-radius: 5px;
+                    height: 76px;
                 }
                 .project .list ul li a .txt {
-                    position: absolute; /*a를 기준으로 정렬*/
-                    left: 28px;
-                    bottom: 40px;
-                    width: calc(100% - 56px); /*왼쪽여백 오른쪽여백 합해서*/
-                    color: #fff;
+                    position: relative; /* absolute해제 */
+                    left: auto;
+                    bottom: auto;
+                    width: auto; 
+                    color: #1d1d1d;
+                    padding: 7px 0 0 0;
                 }
                 .project .list ul li a .txt h3 {
-                    font-family: 'Gmarket Sans';
-                    font-size: 25px;
-                    font-weight: 800;
-                    line-height: 1.2;
-                    letter-spacing: -0.05em;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                .project .list ul li a .txt h3 br {
+                    display: none; /*줄바꿈 삭제*/
                 }
                 .project .list ul li a .txt p {
                     display: none;
@@ -342,17 +311,6 @@ header .tnb .lang {
                     background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_4472' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_4472)'%3E%3Cpath d='M10.1094 8.12531H3.125C2.94792 8.12531 2.79948 8.06542 2.67969 7.94562C2.5599 7.82583 2.5 7.6774 2.5 7.50031C2.5 7.32323 2.5599 7.17479 2.67969 7.055C2.79948 6.93521 2.94792 6.87531 3.125 6.87531H10.1094L7.04688 3.81281C6.92188 3.68781 6.86198 3.54198 6.86719 3.37531C6.8724 3.20865 6.9375 3.06281 7.0625 2.93781C7.1875 2.82323 7.33333 2.76333 7.5 2.75812C7.66667 2.75292 7.8125 2.81281 7.9375 2.93781L12.0625 7.06281C12.125 7.12531 12.1693 7.19302 12.1953 7.26594C12.2214 7.33885 12.2344 7.41698 12.2344 7.50031C12.2344 7.58365 12.2214 7.66177 12.1953 7.73469C12.1693 7.8076 12.125 7.87531 12.0625 7.93781L7.9375 12.0628C7.82292 12.1774 7.67969 12.2347 7.50781 12.2347C7.33594 12.2347 7.1875 12.1774 7.0625 12.0628C6.9375 11.9378 6.875 11.7894 6.875 11.6175C6.875 11.4456 6.9375 11.2972 7.0625 11.1722L10.1094 8.12531Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
                     background-position: center center;
                     background-repeat: no-repeat;
-                }
-
-                /*******************오버 했을 때**********************/
-                .project .list ul li a:hover .photo::before {
-                    opacity: 0.9;
-                }
-                .project .list ul li a:hover .txt p {
-                    display: block; /*none으로 숨긴건 흔히 display block으로 보이게함 */
-                }
-                .project .list ul li a:hover .txt span {
-                    display: inline-block;
                 }
 }/*@media*/
 
