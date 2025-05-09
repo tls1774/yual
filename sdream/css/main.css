@@ -782,6 +782,9 @@ footer .f_nav ul{
 footer .f_nav ul li {
     position: relative; /* before/after 정렬의 기준 */
 }
+footer .f_nav ul li:hover {
+    text-decoration: underline;
+}
 footer .f_nav ul li::after {
     content: "";
     position: absolute;
@@ -804,4 +807,10 @@ footer .f_info {
 footer .copyright p {
     margin: 12px 0 0 0;
     color: rgba(255,255,255,0.6);
+}
+@media screen and (max-width:640px){
+    footer {
+        margin: 71px 0 0 0;
+        padding: 39px 0 126px 0;
+    }
 }
