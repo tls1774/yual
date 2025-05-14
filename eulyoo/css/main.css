@@ -131,38 +131,166 @@ header .tnb .search {
     line-height: 1.3;
 }
 .book .book_wrap .list {
-    width: calc(100% - 285px);
+    width: calc(100% - 270px);
     /* book_wrap의 넓이를 100%로 하고 왼쪽 tit의 넓이를 빼기 */
     overflow-x: hidden;
+    padding: 15px 0 0 15px;
 }
 .book .book_wrap .list ul {
     display: flex;
-    align-items: flex-end;
-    gap: 24px;
-    width: 1778px;
+    gap: 18px;
+    width: 1736px;
     /* li의 넓이 * li의 갯수 = 230*7 = 1610
-    사이 여백의 * li의 갯수  = 24*7  -= 168
-    1610 +168 = 1778*/
-    margin: 42px 0 0 0;
+    사이 여백의 * li의 갯수  = 18*7  = 126
+    1610 +126 = 1778*/
+    margin: 32px 0 0 0;
 }
 .book .book_wrap .list ul li {
     width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .book .book_wrap .list ul li a {
     display: block;
 }
 .book .book_wrap .list ul li a .photo{
-    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 .book .book_wrap .list ul li a .photo img {
     width: 100%; 
 /* 높이는 비율에 맞게 알아서
-- 책은 이미지 전체가 나와야 하기 때문에 object fit 안줌 */             
+- 책은 이미지 전체가 나와야 하기 때문에 object fit 안줌 */  
+    vertical-align: top; 
+    /* 이ㅏ미지에 vertical-align을 주면 이미지 하단에 행간이 사라짐*/          
 }
 .book .book_wrap .list ul li a h3 {
+    font-size: 20px;
     color: #1d1d1d;
     margin: 24px 0 5px 0;
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+.book .book_wrap .list ul li a strong {
+    display: block;
+}
+.book .book_wrap .more {
+    position: absolute;
+    left: 0;
+    top: 217px;
+    color: #842F1A;
+    padding: 0 19px 0 0;
+}
+.book .book_wrap .more::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_21_1138' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23842F1A'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_21_1138)'%3E%3Cpath d='M7.49984 12.8125C7.36693 12.8125 7.25562 12.7676 7.16594 12.6777C7.07615 12.5879 7.03125 12.4766 7.03125 12.3438V7.96875H2.65625C2.52344 7.96875 2.41214 7.9238 2.32234 7.83391C2.23245 7.74401 2.1875 7.63266 2.1875 7.49984C2.1875 7.36693 2.23245 7.25562 2.32234 7.16594C2.41214 7.07615 2.52344 7.03125 2.65625 7.03125H7.03125V2.65625C7.03125 2.52344 7.0762 2.41214 7.16609 2.32234C7.25599 2.23245 7.36734 2.1875 7.50016 2.1875C7.63307 2.1875 7.74438 2.23245 7.83406 2.32234C7.92385 2.41214 7.96875 2.52344 7.96875 2.65625V7.03125H12.3438C12.4766 7.03125 12.5879 7.0762 12.6777 7.16609C12.7676 7.25599 12.8125 7.36734 12.8125 7.50016C12.8125 7.63307 12.7676 7.74438 12.6777 7.83406C12.5879 7.92385 12.4766 7.96875 12.3438 7.96875H7.96875V12.3438C7.96875 12.4766 7.9238 12.5879 7.83391 12.6777C7.74401 12.7676 7.63266 12.8125 7.49984 12.8125Z' fill='%23842F1A'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:641px){
+        /******   오버효과    ******/
+        .book .book_wrap .list ul li a h3 span {
+            position: relative; /* after 정렬의 기준 */
+        }
+        .book .book_wrap .list ul li a h3 span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: #842F1A;
+            transition: 0.5s;
+        }
+        .book .book_wrap .list ul li a:hover h3 span::after {
+            width: 100%; /* span 태그를 기준으로 100% */ 
+        }
+        .book .book_wrap .list ul li a:hover .photo {
+            box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.3);
+        }
+}/* @media */
+@media screen and (max-width:640px){
+                
+            .book {
+                margin: 78px 0 0 0;
+            }
+            .book .book_wrap {
+                width: auto;
+                left: auto;
+                display: block;  /* flex 해제 */
+            }
+            .book .book_wrap .tit {
+                margin: 0 60px 0 20px;
+            }
+            .book .book_wrap .tit h2 {
+                font-size: 25px;
+                margin: 0;
+            }
+            .book .book_wrap .tit h2 br {
+                display: none; /* 줄바꿈 삭제 */
+            }
+            .book .book_wrap .tit p {
+                display: none; /* 숨김 */
+            }
+            .book .book_wrap .list {
+                width: auto;
+                overflow-x: auto;
+                padding: 15px 0 15px 20px; 
+            }
+            .book .book_wrap .list ul {
+                gap: 13px;
+                width: 1064px;
+                /* li의 넓이 * li의 갯수 = 139*7 = 973
+                사이 여백의 * li의 갯수  = 13*7  = 
+                1610 +126 = 1778*/
+                margin: 0;
+            }
+            .book .book_wrap .list ul li {
+                width: 139px;
+            }
+            .book .book_wrap .list ul li a h3 {
+                font-size: 16px;
+                margin: 11px 0 0 0; 
+            }
+            .book .book_wrap .list ul li a strong {
+                display: none;
+            }
+            .book .book_wrap .more {
+                left: auto;
+                top: 0;
+                right: 20px;
+                width: 26px;
+                height: 26px;
+                background-color: #D7CFC9;
+                border-radius: 25px; 
+                padding: 0;
+            }
+            .book .book_wrap .more::after {
+                right: 0;
+                top: 1px;
+                width: 100%;
+                height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_21_1138' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23842F1A'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_21_1138)'%3E%3Cpath d='M7.49984 12.8125C7.36693 12.8125 7.25562 12.7676 7.16594 12.6777C7.07615 12.5879 7.03125 12.4766 7.03125 12.3438V7.96875H2.65625C2.52344 7.96875 2.41214 7.9238 2.32234 7.83391C2.23245 7.74401 2.1875 7.63266 2.1875 7.49984C2.1875 7.36693 2.23245 7.25562 2.32234 7.16594C2.41214 7.07615 2.52344 7.03125 2.65625 7.03125H7.03125V2.65625C7.03125 2.52344 7.0762 2.41214 7.16609 2.32234C7.25599 2.23245 7.36734 2.1875 7.50016 2.1875C7.63307 2.1875 7.74438 2.23245 7.83406 2.32234C7.92385 2.41214 7.96875 2.52344 7.96875 2.65625V7.03125H12.3438C12.4766 7.03125 12.5879 7.0762 12.6777 7.16609C12.7676 7.25599 12.8125 7.36734 12.8125 7.50016C12.8125 7.63307 12.7676 7.74438 12.6777 7.83406C12.5879 7.92385 12.4766 7.96875 12.3438 7.96875H7.96875V12.3438C7.96875 12.4766 7.9238 12.5879 7.83391 12.6777C7.74401 12.7676 7.63266 12.8125 7.49984 12.8125Z' fill='%23842F1A'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            .book .book_wrap .more span {
+                display: none;
+            }
+}/* @media */
+
+
+
 
 footer {
     margin: 500px 0 0 0;
