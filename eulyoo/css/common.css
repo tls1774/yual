@@ -45,3 +45,8 @@ body {
     overflow: hidden;
     color: transparent;
 }
+/**/
+::selection {
+    color: #fff;
+    background-color: #D7BDA6;
+}
