@@ -21,7 +21,7 @@ header {
     align-items: center;
     padding: 0 30px;  /* logo,, tnb 좌우 여백 */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    ::selection
+    
 }
 header .logo a {
     display: block;
