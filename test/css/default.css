@@ -1,12 +1,13 @@
+/* 태그 스타일의 초기화 reset */
 h1,h2,h3,h4,h5,h6 {
-    font-weight: inherit;
+    font-weight: inherit; /* 브라우저에서 주는 스타일 취소 */
     font-size: inherit;
 }
 strong {
     font-weight: inherit;
 }
-em, address {
-    font-style: normal; /* 글자의 기울임 취소*/
+em,address {
+    font-style: normal; /* 글자의 기울임 취소 */
 }
 a {
     color: inherit; /* 글자 파란색 삭제 */
@@ -28,5 +29,5 @@ button {
     box-sizing: border-box; /* 높이/넓이를 준 경우 유지 시키는 코드 */
 }
 li {
-    list-style: none; /* li앞에 동그라미 삭제 */
+    list-style: none; /* li 앞에 동그라미 삭제 */
 }
