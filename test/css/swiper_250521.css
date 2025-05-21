@@ -1,0 +1,233 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common_full.css);
+
+.visual .swiper-slide {
+    height: 800px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.visual .swiper-slide.popup1 {
+    background-image: url(../images/popup01.jpg);
+}
+.visual .swiper-slide.popup2 {
+    background-image: url(../images/popup02.jpg);
+}
+.visual .swiper-slide.popup3 {
+    background-image: url(../images/popup03.jpg);
+}
+.visual h3 {
+    font-size: 45px;
+    font-weight: 800;
+    padding: 320px 0 20px 0;
+}
+.visual .paging {
+    position: absolute; /* swiper를 기준으로 정렬 */
+    left: 0;
+    bottom: 17px;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+.visual .paging .swiper-pagination-bullet { 
+    /* 동그라미 기본 스타일 */
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0;
+    background: none;
+    opacity: 1;
+} 
+.visual .paging .swiper-pagination-bullet.swiper-pagination-bullet-active { 
+    /* 현재 팝업 동그라미*/
+    background-color: #fff;
+}
+.visual .btn_prev {
+    position: absolute; /* swiper를 기준으로 정렬 */
+    z-index: 10;
+    left: 20px;
+    top: 368px;
+    width: 21px;
+    height: 39px;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='40' viewBox='0 0 21 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.63398 20L20.3272 35.6933C20.7411 36.1072 20.9428 36.5945 20.9324 37.1552C20.9217 37.7164 20.7093 38.2038 20.2954 38.6177C19.8812 39.0316 19.3937 39.2386 18.8329 39.2386C18.2722 39.2386 17.7847 39.0316 17.3704 38.6177L1.38919 22.6683C1.01246 22.2915 0.73329 21.8695 0.551693 21.4021C0.370095 20.9348 0.279297 20.4674 0.279297 20C0.279297 19.5327 0.370095 19.0653 0.551693 18.5979C0.73329 18.1306 1.01246 17.7085 1.38919 17.3318L17.3704 1.35003C17.7847 0.936141 18.2776 0.734579 18.8491 0.745343C19.4206 0.756107 19.9133 0.968433 20.3272 1.38232C20.7411 1.79621 20.948 2.28371 20.948 2.84482C20.948 3.40559 20.7411 3.89291 20.3272 4.3068L4.63398 20Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.visual .btn_next {
+    position: absolute; /* swiper를 기준으로 정렬 */
+    z-index: 10;
+    right: 20px;
+    top: 368px;
+    width: 21px;
+    height: 39px;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='40' viewBox='0 0 21 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.63398 20L20.3272 35.6933C20.7411 36.1072 20.9428 36.5945 20.9324 37.1552C20.9217 37.7164 20.7093 38.2038 20.2954 38.6177C19.8812 39.0316 19.3937 39.2386 18.8329 39.2386C18.2722 39.2386 17.7847 39.0316 17.3704 38.6177L1.38919 22.6683C1.01246 22.2915 0.73329 21.8695 0.551693 21.4021C0.370095 20.9348 0.279297 20.4674 0.279297 20C0.279297 19.5327 0.370095 19.0653 0.551693 18.5979C0.73329 18.1306 1.01246 17.7085 1.38919 17.3318L17.3704 1.35003C17.7847 0.936141 18.2776 0.734579 18.8491 0.745343C19.4206 0.756107 19.9133 0.968433 20.3272 1.38232C20.7411 1.79621 20.948 2.28371 20.948 2.84482C20.948 3.40559 20.7411 3.89291 20.3272 4.3068L4.63398 20Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(180deg);
+}
+@media screen and (max-width:1440px){
+    .visual .btn_prev,
+    .visual .btn_next {
+        display: none;
+    }
+}/*@media*/
+
+@media screen and (max-width:768px){
+            
+        .visual .swiper-slide {
+            height: 697px;
+        }
+        .visual h3 {
+            font-size: 25px;
+            padding: 315px 0 22px 0;
+        }
+        .visua p {
+            font-size: 16px;
+        }
+        .visual .paging {
+            bottom: 11px;
+        }
+}/*@media*/
+
+.biz {
+    margin: 157px 0 0 0;
+}
+.biz .tit h2 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.biz .list {
+    margin: 47px 0 0 0;
+}
+.biz .list ul li a {
+    display: block;
+}
+.biz .list ul li a .photo {
+    overflow: hidden;
+    height: 188px;
+}
+.biz .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.biz .list ul li a h3 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 21px 0 12px 0;
+    color: #1d1d1d;
+}
+@media screen and (max-width:768px){
+            
+        .biz {
+            margin: 76px 0 0 0;
+        }
+        .biz .tit h2 {
+            font-size: 25px;
+        }
+        .biz .list {
+            margin: 38px 0 0 0;
+        }
+        .biz .list ul li a .photo {
+            height: 123px;
+        }
+        .biz .list ul li a h3 {
+            font-size: 20px;
+            margin: 19px 0 13px 0;
+        }
+}/*@media*/
+.notice {
+    background-color: #9D272D;
+    color: #fff;
+    padding: 157px 0 170px 0;
+    margin: 181px 0 0 0;
+}
+.notice .tit h2 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.notice .list {
+    margin: 51px 0 0 0;
+    width: calc(50% + 630px);
+    /* wrapper 사이즈 1260px의 절반 630px 을 더한 값 */
+    position: relative;
+    left: calc(50% - 630px);
+}
+.notice .list ul li  {
+    width: 404px;
+}
+.notice .list ul li a {
+    display: block;
+    height: 546px;
+    background-color: #fff;
+    color: #1d1d1d;
+    border-radius: 20px;
+}
+.notice .list ul li a .photo {
+    overflow: hidden;
+    height: 350px;
+    border-radius: 20px 20px 0 0;
+}
+.notice .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.notice .list ul li a .txt {
+    padding: 39px 30px;
+}
+.notice .list ul li a .txt h3 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 13px 0;
+}
+@media screen and (max-width:1300px){
+    .notice .list {
+        width: calc(100% - 20px);
+        left: 20px;
+    }
+}/*@media*/
+@media screen and (max-width:768px){
+    .notice {
+        padding: 76px 0 75px 0;
+        margin: 181px 0 0 0;
+    }
+    .notice .tit h2 {
+        font-size: 25px;
+    }
+    .notice .list {
+        margin: 22px 0 0 0;
+    }
+    .notice .list ul li  {
+        width: 239px;
+    }
+    .notice .list ul li a {
+        border-radius: 10px;
+    }
+    .notice .list ul li a .photo {
+        height: 207px;
+        border-radius: 10px 10px 0 0;
+    }
+    .notice .list ul li a .txt {
+        padding: 15px 30px;
+    }
+    .notice .list ul li a .txt h3 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+    }
+}/*@media*/
+footer {
+    margin: 2000px 0 0 0;
+}
