@@ -80,9 +80,13 @@ $(document).ready(function(){
          >> header .gnb .gnb_close
     */
 
-    $('header .gnb .gnb_open').on('click' , function(){
-        $('header').abbClass('menu_open')
-    })
-       
+         $('header .gnb .gnb_open').on('click' , function(){
+            $('header').abbClass('menu_open')
+        })
+        $('header .gnb .gnb_open').on('click' , function(){
+            $('header').removeClass('menu_open')
+        })
+    
+
 })//$(document).ready
 
