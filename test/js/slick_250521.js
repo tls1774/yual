@@ -11,6 +11,11 @@ $(document).ready(function(){
         //infinite: false, //무한반복
     });
     
-    $('.visual .btn_wrap .ctrl_stop').slick('slickPause');  /* 일시정지 기능 */
-    $('.visual .btn_wrap .ctrl_play').slick('slickPlay');  /* 재생 기능 */
+    $('.visual .btn_wrap .ctrl_stop').on('click' , function(){
+         $('.visual .popup .popup_wrap').slick('slickPause');  /* 일시정지 기능 */
+    })
+   
+    $('.visual .btn_wrap .ctrl_play').on('click' , function(){
+        $('.visual .popup .popup_wrap').slick('slickPlay');  /* 일시정지 기능 */
+   })
 })
