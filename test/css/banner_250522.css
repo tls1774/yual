@@ -1,0 +1,108 @@
+@import url(common_full.css);
+@import url(font.css);
+@import url(default.css);
+
+.tour {
+    margin: 150px 0;
+}
+.tour .tit h2 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 26px 0;
+}
+.tour .list {
+    margin: 32px 0 0 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.tour.acc01 .list ul li {
+   /* width: 25%;*/
+   flex: 1 1 0%;
+    transition: 0.5s
+}
+.tour.acc01 .list ul li.on {
+    /*width: 70%;*/
+    flex: 3 1 0%;
+}
+.tour.acc02 .list ul li {
+    /* width: calc(25% - 9px); */
+    /* 12+12+12 / 4= 9*/  
+    flex: 1 1 0%;
+}
+.tour.acc02 .list ul li.on {
+    flex: 3 1 0%;
+    transition: 0.5s;
+}
+.tour .list ul a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 384px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding:  0 30px 40px 30px;
+}
+.tour .list ul li.list01 a {
+    background-image: url(../images/tour01.jpg);
+}
+.tour .list ul li.list02 a {
+    background-image: url(../images/tour02.jpg);
+}
+.tour .list ul li.list03 a {
+    background-image: url(../images/tour03.jpg);
+}
+.tour .list ul li.list04 a {
+    background-image: url(../images/tour04.jpg);
+}
+.tour .list ul li a h3 {
+    font-size: 22px;
+    font-weight: 800;
+}
+.tour .list ul li a p {
+    margin: 4px 0 0 0;
+    display: none;
+}
+@media screen and (max-width:1024px){
+            
+        .tour {
+            margin: 96px 0;
+        }
+        .tour .tit h2 {
+            font-size: 25px;
+            margin: 0 0 16px 0;
+        }
+        .tour .list {
+            margin: 23px 0 0 0;
+        }
+        .tour .list ul {
+            display: block;
+            gap: 12px;
+        }
+        .tour.acc01 .list ul li {
+            width: 100%;
+        }
+        .tour.acc01 .list ul li.on {
+            width: 100%;
+        }
+        .tour.acc02 .list ul li {
+            width:100%; 
+        }
+        .tour .list ul a {
+            height: 250px;
+            padding:  0 20px 25px 28px;
+        }
+        .tour .list ul li a h3 {
+            font-size: 20px;
+        }
+        .tour .list ul li a p {
+            margin: 3px 0 0 0;
+            display: block;
+        }
+}

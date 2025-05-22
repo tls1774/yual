@@ -168,7 +168,6 @@
 }
 .notice .list ul li a {
     display: block;
-    height: 546px;
     background-color: #fff;
     color: #1d1d1d;
     border-radius: 20px;
@@ -202,7 +201,7 @@
 @media screen and (max-width:768px){
     .notice {
         padding: 76px 0 75px 0;
-        margin: 181px 0 0 0;
+        margin: 90px 0 0 0;
     }
     .notice .tit h2 {
         font-size: 25px;
