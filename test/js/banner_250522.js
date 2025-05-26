@@ -21,12 +21,12 @@ $('.tour.acc01 .list ul li').on('mouseenter' , function(){
 */
 
 $('.tour.acc02 .list ul li').on('mouseenter' , function(){
-    console.log('oeeeeevvvvvvvvvvvvver')
+    // console.log('oeeeeevvvvvvvvvvvvver')
     $(this).addClass('on')
 })
 
 $('.tour.acc02 .list ul li').on('mouseleave' , function(){
-    console.log('oututututututttttttttttt')
+    // console.log('oututututututttttttttttt')
     $(this).removeClass('on')
 })
 
