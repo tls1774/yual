@@ -3,40 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <!--jquery 라이브러리-->
     <script src="js/jquery-3.7.1.min.js"></script>
+
     <!--swiper 라이브러리-->
-    <script src="js/"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>동물보호센터</title>
 </head>
 <body>
+    <div class="skip_nav">
+        <a href="#skip_content">본문바로가기</a>
+        <!-- id="skip_content" 인 요소로 바로가기 (내부링크) -->
+    </div>
     <div id="wrap">
-        <header></header>
+        <header>
+            <h1 class="logo"><a href="#"><span class="blind">동물보호센터</span></a></h1>
+            <nav class="gnb">
+                <button class="gnb_open"><span class="blind">메뉴열기</span></button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <li>
+                            <a href="https://samsungfire.com/"><span>찾습니다</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>실종신고</span></a></li>
+                                <li><a href="#"><span>구조정보/목격담</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://samsungfire.com/"><span>구조분양</span></a>
+                        </li>
+                        <li>
+                            <a href="https://samsungfire.com/"><span>네트워크</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>동물찾기 네트워크</span></a></li>
+                                <li><a href="https://www.animal.go.kr" target="_blank" title="새창열림"><span>국가동물보호정보시스템</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://samsungfire.com/"><span>재회성공담</span></a>
+                        </li>
+                        <li>
+                            <a href="https://samsungfire.com/"><span>대처방법</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>실종시 대처방법</span></a></li>
+                                <li><a href="#"><span>구조시 대처방법</span></a></li>
+                                <li><a href="#"><span>고양이에 대해</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+            </nav>
+            <div class="util">
+                <div class="search">
+                    <button class="search_open"><span class="blind">검색열기</span></button>
+                </div>
+            </div>
+        </header>
         <main class="container">
             <section class="visual">
                 <h2 class="blind">팝업</h2>
-                <div class="swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper_slide bg1">
-                            <p>당신의 따뜻한 손길이 <br> 사랑이 되고, 가족이 됩니다 
-                                </p>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide bg1">
+                            <div class="wrapper">
+                                <p>당신의 따뜻한 손길이 <br> 사랑이 되고, 가족이 됩니다 
+                                    </p>
+                            </div>
                         </li>
-                        <li class="swiper_slide bg1">
-                            <p>작은 생명에게 <br> 큰 사랑을 전해주세요</p>
+                        <li class="swiper-slide bg2">
+                            <div class="wrapper">
+                                <p>길 위 아이들에게, <br> 오늘과 내일을 선물해주세요 </p>
+                            </div>
                         </li>
-                        <li class="swiper_slide bg1">
-                            <p>작은 관심이 실종 동물에게 <br> 내일을 선물합니다</p>
+                        <li class="swiper-slide bg3">
+                            <div class="wrapper">
+                                <p>작은 생명에게 <br> 큰 사랑을 전해주세요</p>
+                            </div>
                         </li>
                     </ul>
                     <div class="btn_wrap">
-                        <button class="btn_prev">이전팝업보기</button>
-                        <button class="btn_next">다음팝업보기</button>
-                        <button class="btn_stop">일시정지</button>
-                        <button class="btn_start">다시시작</button>
-                    </div>
+                        <button class="btn_prev"><span class="blind">이전팝업보기</span></button>
+                        <button class="btn_next"><span class="blind">다음팝업보기</span></button>
+                        <button class="btn_stop"><span class="blind">일시정지</span></button>
+                        <button class="btn_play"><span class="blind">다시시작</span></button>
+                    </div><!--btn_wrap-->
+                </div><!--swiper-->
+            </section><!--visual-->
+            <section class="find" id="skip_content">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>찾습니다</h2>
+                    </div><!--tit-->
+                    <div class="list">
+                        <div class="tab_list">
+                            <ul role="tablist">
+                                <!-- 선택된 li에는 active 클래스 추가 , button에 선택됨 이라고 써줌 
+                                    aria-selected 가 true가 선택된 것 false 선택이 안된것
+                                    data- content li를 눌렀을 때 나타날 탭 콘텐츠 id값 
+                                    li를 클릭했을 때 data-contet 값을 호출해서 id가 같은 요소만 보이게함
+                                    data-content는 내맘대로 속성을 추가....... (값을 저장할 공간이 필요해서 - 표준위배 )
+                                    data-link 라던가 ...data-value 이렇게 data가 들어간 속성은 퍼블이 만든 속성-->
+                                <li role="tab" aria-selected="true" class="item1 active" data-content="tab_item1"><button>가족을 <span class="">선택됨</span></button></li>
+                                <li role="tab" aria-selected="false" class="item2" data-content="tab_item2"><button>주인을<span class="blind"></span></button></li>
+                            </ul>
+                        </div><!--tab_list-->
+                        <div class="tab_content">
+                            <!-- 가족을 , 주인을 탭 콘텐츠를 구분 item1/item2 로 클래스명 구분
+                            현재 선택된 탭 콘텐츠는 active 클래스 추가-->
+                            <div class="tab_item item1 active" id="tab_item1">
+                                <h3 class="blind">가족을 찾습니다</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find01.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>포메라니안 / 암컷 / 2살 포메라니안 / 암컷 / 2살</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 고양시 덕양구 원흥동 462</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.04.28</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>눈물 자국이 심함, 등쪽이 갈색입니다</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find02.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_end">종료</strong>
+                                                <h4>웰시코기 카디건 / 수컷 / 3살</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>인천광역시 미추홀구 도화초등학교</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.05.07</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>사람을 좋아함, 체중 15kg, 귀가 큼</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find03.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>러시안 블루 / 암컷 / 2살</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 강남구 논현동 194-9</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.05.14</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>뚱뚱함, 가슴에 흰색털이 있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find04.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>코리아 쇼트 헤어 / 암컷 / 3살</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 동작구 새움고시원</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.05.21</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>리본 목걸이를 달고있음, 초록색이나 에메랄드 빛 색의 눈</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab_item item2" id="tab_item2">
+                                <h3 class="blind">주인을 찾습니다</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find05.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_care">구조</strong>
+                                                <h4>흰색 고양이</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>대구광역시 달서구 대성 새마을금고</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.05.03</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>온순하고 등에 검은 자국</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find06.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_end">종료</strong>
+                                                <h4>무지개 앵무새</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 남양주시 남양주시 별내면</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.05.03</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>말을 따라하고 인근 운동장에 화장실 근처에서 떠돌고 있었어요</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find07.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_care">구조</strong>
+                                                <h4>비숑</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>대구광역시 동구 반야월북로53길</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.05.17</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>사람을 잘 따르고 목줄의 이름이 복순이에요</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find08.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_see">목격</strong>
+                                                <h4>검정 슈나우저</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 동작구 새움고시원</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025.05.18</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>고시원쪽 편의점 뒤쪽에서 떠돌아다니는 것을 목격했습니다</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--tab_content-->
+                    </div><!--list-->
                 </div>
-            </section>
+            </section><!--find-->
+            <section class="slogan"></section><!--slogan-->
+            <section class="adopt"></section><!--adopt-->
+            <section class="review"></section><!--review-->
         </main>
+        <footer></footer>
     </div>
 </body>
 </html>

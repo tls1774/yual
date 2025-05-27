@@ -1,25 +1,25 @@
+/* 웹폰트를 선언 */
 @font-face {
-    font-family: 'HancomMalangMalang-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-family: "SUITE";
+	font-style: normal;
     font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'HancomMalangMalang-Bold';
-    src: url('../font/HancomMalangMalang-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SUTE-Bold';
-    src: url('../font/SUITE-Bold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SUITE-Regular';
     src: url('../font/SUITE-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
 }
-
+@font-face {
+    font-family: "SUITE";
+	font-style: normal;
+    font-weight: 700;
+    src: url('../font/SUITE-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "HancomMalangMalang";
+	font-style: normal;
+    font-weight: 700;
+    src: url('../font/HancomMalangMalang-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "HancomMalangMalang";
+	font-style: normal;
+    font-weight: 400;
+    src: url('../font/HancomMalangMalang-Regular.woff2') format('woff2');
+}
