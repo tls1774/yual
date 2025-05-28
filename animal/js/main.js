@@ -122,14 +122,33 @@ $(document).ready(function(){
     })
     /*************************** visual swiper : 끝 *****************************/
 
-    /**************************** find 탭 기능 : 시작 ********************* */
+    /**************************** find 탭 기능 : 시작 ********************* 
+     * 1.클릭한 li에서 data-content 값을 가져와서
+     * = > tab_item 중에 해당 값이 id인 요소를 찾아서 나타나게 해야함 (다른 요소는 숨김)
+     * 2.클릭한 li에만 active 클래스 줌 
+     * 3.클릭한 li안에 있는 span에 선택됨이라고 글자 써줌 ( 다른 li에 있는 건 삭제)
+     * 4.클릭한 li 속성 aria-selected값을 true로 변경 (다른 li는 모두 false)
+     * *********** */
+    
     let find_content //클릭한 메뉴의 이름(id)
     $('.find .list .tab_list ul li').on('click', function(){
         
         if($(this).hasClass('active') == false){
             //console.log('선택안된메뉴')
             find_content = $(this).attr('data-content')
-            console.log(find_content)
+            //console.log(find_content)
+
+            $('.find .list .tab_content .tab_item ').removeClass('active')
+            $('.find .list .tab_content').find('#'+find_content).addClass('active')
+
+            $('.find .list .tab_list ul li').removeClass('active')
+            $(this).addClass('active')
+
+            $('.find .list .tab_list ul li button span').text('')
+            $(this).find('span').text('선택됨')
+
+            $('.find .list .tab_list ul li').attr('aria-selected', 'false')
+            $(this).attr('aria-selected', 'true')
         }
     })
 
