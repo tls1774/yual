@@ -1089,7 +1089,7 @@ footer .top {
 footer .wrapper {
     display: flex; /* link_wrap, info_wrap 좌우배치 */
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 footer .link_wrap ul.link li {
     margin: 0 0 5px 0;
