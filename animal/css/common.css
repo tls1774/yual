@@ -45,3 +45,25 @@ body {
     color: #fff;
     background-color: #FE8153;
 }
+
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000; /*맨 위에 있으라고 많이줌*/
+    width: 100%;
+}
+.skip_nav a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #FF6647;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+}
+.skip_nav a:focus {
+    top: 0;
+}
