@@ -326,3 +326,71 @@
     }
 }
 
+/* 회사소개 > 연혁 */
+.ctn_history {
+    margin: 0 0 164px 0;
+}
+.ctn_history .his_tit {
+    margin: 44px 0 61px 0 ;
+}
+.ctn_history .his_tit strong {
+    color: var(--point-color);
+    display: block;
+}
+.ctn_history .his_tit h2 {
+    font-size: 2.058rem;
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+    margin: 8px 0 0 0;
+}
+.ctn_history .his_photo .photo {
+    overflow: hidden;
+    height: 320px;
+}
+.ctn_history .his_photo .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ctn_history .his_year_group {
+    margin: 106px 0 112px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.ctn_history .his_year_group.reverse {
+    flex-direction: row-reverse; /* 가로반전 */
+}
+.ctn_history .his_year_group .year_tit {
+    width: 354px;  /****** 테스트 필요 ******/
+}
+.ctn_history .his_year_group .year_cont {
+    width: 641px;  /****** 테스트 필요 ******/
+}
+.ctn_history .his_year_group .year_tit h3 {
+    font-size: 40px;
+    color: var(--tit-color);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+}
+.ctn_history .his_year_group .year_tit .photo {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 422px;
+    margin: 46px 0 0 0;
+}
+.ctn_history .his_year_group .year_tit .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ctn_history .his_year_group .year_cont h4 {
+    font-size: 25px;
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+}
+.ctn_history .his_year_group .year_cont ul  {
+    margin: 15px 0 51px 0;
+}
+.ctn_history .his_nav {
+    display: none; /* 임시로!!!!!!!! */
+}
