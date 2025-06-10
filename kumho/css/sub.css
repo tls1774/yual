@@ -135,12 +135,12 @@
 @media screen and (max-width:1024px){
     .page_tit {
         margin: 64px 0 39px 0;
-        font-size: 40px;
+        font-size: 35px;
     }
 }
 @media screen and (max-width:768px){
     .page_tit {
-        font-size: 35px;
+        font-size: 30px;
     }
 }
 
