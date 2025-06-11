@@ -356,21 +356,37 @@
     margin: 106px 0 112px 0;
     display: flex;
     justify-content: space-between;
-}
-.ctn_history .his_year_group.reverse {
-    flex-direction: row-reverse; /* 가로반전 */
+   
 }
 .ctn_history .his_year_group .year_tit {
-    width: 354px;  /****** 테스트 필요 ******/
+    max-width: 354px;  /****** 테스트 필요 ******/
+    width: 35%;
 }
 .ctn_history .his_year_group .year_cont {
-    width: 641px;  /****** 테스트 필요 ******/
+    max-width: 641px;  /****** 테스트 필요 ******/
+    width: 60%;
+    margin: 15px 0 0 0;
+    padding: 0 0 0 43px;
+    border-width: 0 0 0 2px;
+    border-style: solid;
+    border-color: #ededed;
+    position: relative;
+}
+.ctn_history .his_year_group .year_cont::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 2px;
+    height: 20px;
+    background-color: #fff;
 }
 .ctn_history .his_year_group .year_tit h3 {
     font-size: 40px;
     color: var(--tit-color);
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
+    margin: 0 0 25px 0;
 }
 .ctn_history .his_year_group .year_tit .photo {
     overflow: hidden;
@@ -387,10 +403,148 @@
     font-size: 25px;
     font-weight: var(--bold-weight);
     color: var(--tit-color);
+    line-height: var(--tit-line-height);
+    margin: 0 0 24px 0;
+    position: relative; /* before 정렬의 기준 */
 }
-.ctn_history .his_year_group .year_cont ul  {
-    margin: 15px 0 51px 0;
+.ctn_history .his_year_group .year_cont h4::before {
+    content: "";
+    position: absolute;
+    left: -47px;
+    top: 16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1d1d1d;
+    z-index: 1;
+}
+.ctn_history .his_year_group .year_cont > *:last-child {
+    position: relative;
+}
+.ctn_history .his_year_group .year_cont > *:last-child::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    bottom: -13px;
+    width: 2px;
+    height: calc(100% + 48px);
+    background-color: #fff;
+}
+
+.ctn_history .his_year_group .year_cont ul + h4 {
+    margin-top: 51px;
+}
+.ctn_history .his_year_group .year_cont ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.ctn_history .his_year_group .year_cont ul li strong {
+    display: block;
+    color: var(--tit-color);
+}
+.ctn_history .his_year_group .year_cont ul li span {
+    display: block;
+    width: calc(100% - 89px);
 }
 .ctn_history .his_nav {
     display: none; /* 임시로!!!!!!!! */
 }
+@media screen and (min-width:769px){
+    /* reverse 스타일은 pc버전에서만 적용 */
+    .ctn_history .his_year_group.reverse {
+        flex-direction: row-reverse; /* 가로반전 */
+    }
+    .ctn_history .his_year_group.reverse .year_cont {
+        padding-right: 43px;
+        padding-left: 0;
+        border-width: 0 2px 0 0 ;
+    }
+    .ctn_history .his_year_group.reverse .year_cont::before {
+        left: auto;
+        right: -2px;
+    }
+    .ctn_history .his_year_group.reverse .year_cont h4::before  {
+        left: auto;
+        right: -47px;
+    }
+    .ctn_history .his_year_group.reverse .year_cont > *:last-child::before {
+        left: auto;
+        right: -45px;
+    }
+    .ctn_history .his_year_group.reverse .year_cont {
+        text-align: right;
+    }
+    .ctn_history .his_year_group.reverse .year_cont ul li{
+        flex-direction: row-reverse;
+    } 
+}/* @media */
+
+@media screen and (max-width:768px){
+    .ctn_history {
+        margin: 0 0 48px 0;
+    }
+    .ctn_history .his_tit {
+        margin: 48px 0 33px 0 ;
+    }
+    .ctn_history .his_tit h2 {
+        font-size: 20px;
+        margin: 5px 0 0 0;
+    }
+    .ctn_history .his_tit h2 br {
+        display: none;
+    }
+    .ctn_history .his_photo .photo {
+        height: 137px;
+    }
+    .ctn_history .his_year_group {
+        margin: 33px 0 29px 0;
+        display: block;
+    }
+    .ctn_history .his_year_group .year_tit {
+        max-width: 100%;  
+        width: auto;
+    }
+    .ctn_history .his_year_group .year_cont {
+        max-width: 100%;  
+        width: auto;
+        margin: 25px 0 0 0;
+        padding: 0 0 0 20px;
+    }
+    .ctn_history .his_year_group .year_tit h3 {
+        font-size: 25px;
+        margin: 0 0 16px 0;
+    }
+    .ctn_history .his_year_group .year_tit h3 br {
+        display: none;
+    }
+    .ctn_history .his_year_group .year_tit .photo {
+        display: none;
+    }
+    .ctn_history .his_year_group .year_tit .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .ctn_history .his_year_group .year_cont h4 {
+        font-size: 22px;
+        margin: 0 0 14px 0;
+    }
+    .ctn_history .his_year_group .year_cont ul + h4 {
+        margin-top: 42px;
+    }
+    .ctn_history .his_year_group .year_cont h4::before {
+        left: -24px;
+    }
+    .ctn_history .his_year_group .year_cont > *:last-child::before {
+        left: -22px;
+        height: calc(100% + 35px);
+    }
+    .ctn_history .his_year_group .year_cont ul li span {
+        display: block;
+        width: calc(100% - 89px);
+    }
+    .ctn_history .his_nav {
+        display: none; /* 임시로!!!!!!!! */
+    }
+}/*@media*/
