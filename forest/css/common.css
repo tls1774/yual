@@ -19,10 +19,10 @@ html, body {
     overflow-x: hidden; /* 가로스크롤 삭제 */
     width: 100%;
 }
-@media screen and (max-width:1300px){ /* 20+20 = 40 + 1260 = 1300 */
+@media screen and (max-width:1300px){ /* 30+30 + 1260 = 1320 */
     .wrapper {
         width: auto;
-        margin: 0 20px;
+        margin: 0 30px;
     }
 }
 @media screen and (max-width:768px){
@@ -75,6 +75,7 @@ html, body {
     --tit-font-size: 2.35rem; /* 40px/17 = 2.65 */
     --sub-tit-font-size: 1.29rem; /* 40px/17 = 2.65 */
     --tit-line-height: 1.2;
+    --disply-size: 60px
     
 }
 @media screen and (max-width:1024px){
@@ -82,11 +83,14 @@ html, body {
         --header-h: 56px; /* header 높이 */
         --header-h-m: -56px;
         --tit-font-size: 1.29rem; /* 22px/17 */
+        --disply-size: 40px
     }
 }
 @media screen and (max-width:768px){
     :root {
         --tit-font-size: 1.56rem; /* 25px/16 = */
         --sub-tit-font-size: 1.25rem; /*20px*/
+        --disply-size: 28px
+    
     }
 }
