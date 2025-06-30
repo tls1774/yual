@@ -306,6 +306,9 @@ header .util .search {
         color: #555;
     }
 }
+.about {
+    margin: 0 0 132px 0;
+}
 .about .wrapper {
     display: flex;
     justify-content: space-between;
@@ -390,13 +393,126 @@ header .util .search {
         font-size: 25px;
     }
 }
+.room {
+    background: url(../images/room_bg.jpg) no-repeat center center / cover;
+    height: 1000px;
+    color: #fff;
+}
 .room .wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 0 383px 0 0;
+    padding: 0 53px 0 0;
 }
-
-
+.room .tit {
+    margin: 183px 0 0 0;
+} 
+.room .tit h2 {
+    font-size: 45px;
+    margin: 0 0 75px 0;
+}
+.room .tit .list ul li {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+.room .tit .list ul li:last-child {
+    margin-bottom: 55px;
+}
+.room .tit .list ul li.active {
+    color: #fff;
+}
+.room .tit a {
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 15px 26px; 
+    display: inline-block;
+}
+.room .info {
+    position: relative;
+    width: 564px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 0 0 83px;
+}
+.room .info h3 {
+    position: absolute;
+    left: -200px;
+    bottom: 60px;
+    transform: rotate(90deg);
+    font-size: 40px;
+} 
+.room .info h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 189px 0 34px 0;
+}
+.room .info .list ul li.list01,
+.room .info .list ul li.list02{
+    display: flex;
+    margin-bottom: 30px;
+}
+.room .info .list ul li.list03 {
+    display: flex;
+    margin-bottom: 39px;
+}
+.room .info .list ul li.list01 h5,
+.room .info .list ul li.list02 h5,
+.room .info .list ul li.list03 h5 {
+    padding: 0 0 0 50px;
+    width: 125px;
+    position: relative;
+} 
+.room .info .list ul li.list01 h5::before,
+.room .info .list ul li.list02 h5::before,
+.room .info .list ul li.list03 h5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 33px;
+    background-color: #677333;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.room .info .list ul li.list01 h5::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_54_810' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_54_810)'%3E%3Cpath d='M5 20V10.85L2.2 13L1 11.4L12 3L16 6.05V4H19V8.35L23 11.4L21.8 13L19 10.85V20H13V14H11V20H5ZM7 18H9V12H15V18H17V9.325L12 5.525L7 9.325V18ZM10 10.025H14C14 9.49167 13.8 9.05417 13.4 8.7125C13 8.37083 12.5333 8.2 12 8.2C11.4667 8.2 11 8.37083 10.6 8.7125C10.2 9.05417 10 9.49167 10 10.025Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.room .info .list ul li.list02 h5::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_54_817' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_54_817)'%3E%3Cpath d='M1 20V17.2C1 16.6333 1.14583 16.1125 1.4375 15.6375C1.72917 15.1625 2.11667 14.8 2.6 14.55C3.63333 14.0333 4.68333 13.6458 5.75 13.3875C6.81667 13.1292 7.9 13 9 13C10.1 13 11.1833 13.1292 12.25 13.3875C13.3167 13.6458 14.3667 14.0333 15.4 14.55C15.8833 14.8 16.2708 15.1625 16.5625 15.6375C16.8542 16.1125 17 16.6333 17 17.2V20H1ZM19 20V17C19 16.2667 18.7958 15.5625 18.3875 14.8875C17.9792 14.2125 17.4 13.6333 16.65 13.15C17.5 13.25 18.3 13.4208 19.05 13.6625C19.8 13.9042 20.5 14.2 21.15 14.55C21.75 14.8833 22.2083 15.2542 22.525 15.6625C22.8417 16.0708 23 16.5167 23 17V20H19ZM9 12C7.9 12 6.95833 11.6083 6.175 10.825C5.39167 10.0417 5 9.1 5 8C5 6.9 5.39167 5.95833 6.175 5.175C6.95833 4.39167 7.9 4 9 4C10.1 4 11.0417 4.39167 11.825 5.175C12.6083 5.95833 13 6.9 13 8C13 9.1 12.6083 10.0417 11.825 10.825C11.0417 11.6083 10.1 12 9 12ZM19 8C19 9.1 18.6083 10.0417 17.825 10.825C17.0417 11.6083 16.1 12 15 12C14.8167 12 14.5833 11.9792 14.3 11.9375C14.0167 11.8958 13.7833 11.85 13.6 11.8C14.05 11.2667 14.3958 10.675 14.6375 10.025C14.8792 9.375 15 8.7 15 8C15 7.3 14.8792 6.625 14.6375 5.975C14.3958 5.325 14.05 4.73333 13.6 4.2C13.8333 4.11667 14.0667 4.0625 14.3 4.0375C14.5333 4.0125 14.7667 4 15 4C16.1 4 17.0417 4.39167 17.825 5.175C18.6083 5.95833 19 6.9 19 8ZM3 18H15V17.2C15 17.0167 14.9542 16.85 14.8625 16.7C14.7708 16.55 14.65 16.4333 14.5 16.35C13.6 15.9 12.6917 15.5625 11.775 15.3375C10.8583 15.1125 9.93333 15 9 15C8.06667 15 7.14167 15.1125 6.225 15.3375C5.30833 15.5625 4.4 15.9 3.5 16.35C3.35 16.4333 3.22917 16.55 3.1375 16.7C3.04583 16.85 3 17.0167 3 17.2V18ZM9 10C9.55 10 10.0208 9.80417 10.4125 9.4125C10.8042 9.02083 11 8.55 11 8C11 7.45 10.8042 6.97917 10.4125 6.5875C10.0208 6.19583 9.55 6 9 6C8.45 6 7.97917 6.19583 7.5875 6.5875C7.19583 6.97917 7 7.45 7 8C7 8.55 7.19583 9.02083 7.5875 9.4125C7.97917 9.80417 8.45 10 9 10Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.room .info .list ul li.list03 h5::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_54_824' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='23' height='23'%3E%3Crect width='23' height='23' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_54_824)'%3E%3Cpath d='M10.6378 18.2082H12.3149V17.0103C13.1135 16.8665 13.8003 16.555 14.3753 16.0759C14.9503 15.5967 15.2378 14.8859 15.2378 13.9436C15.2378 13.2728 15.0462 12.6578 14.6628 12.0988C14.2795 11.5398 13.5128 11.0526 12.3628 10.6373C11.4045 10.3179 10.7416 10.0384 10.3743 9.7988C10.0069 9.55921 9.82324 9.23178 9.82324 8.8165C9.82324 8.40123 9.97099 8.0738 10.2665 7.83421C10.562 7.59463 10.9892 7.47484 11.5482 7.47484C12.0594 7.47484 12.4587 7.59862 12.7462 7.84619C13.0337 8.09376 13.2413 8.40123 13.3691 8.76859L14.9024 8.14567C14.7267 7.58664 14.4033 7.09949 13.9321 6.68421C13.4609 6.26893 12.9378 6.03734 12.3628 5.98942V4.7915H10.6857V5.98942C9.88713 6.16511 9.26421 6.5165 8.81699 7.04359C8.36977 7.57067 8.14616 8.16164 8.14616 8.8165C8.14616 9.5672 8.36578 10.1741 8.80501 10.6373C9.24425 11.1005 9.93505 11.4998 10.8774 11.8353C11.8837 12.2026 12.5824 12.53 12.9738 12.8175C13.3651 13.105 13.5607 13.4804 13.5607 13.9436C13.5607 14.4707 13.3731 14.858 12.9977 15.1056C12.6224 15.3531 12.1712 15.4769 11.6441 15.4769C11.117 15.4769 10.6498 15.3132 10.2425 14.9858C9.83522 14.6583 9.53574 14.1672 9.34408 13.5123L7.76283 14.1353C7.98644 14.9019 8.33383 15.5208 8.80501 15.992C9.27619 16.4632 9.88713 16.7866 10.6378 16.9623V18.2082ZM11.5003 21.0832C10.1746 21.0832 8.9288 20.8316 7.76283 20.3285C6.59685 19.8254 5.58262 19.1425 4.72012 18.28C3.85762 17.4175 3.1748 16.4033 2.67168 15.2373C2.16855 14.0714 1.91699 12.8255 1.91699 11.4998C1.91699 10.1741 2.16855 8.92831 2.67168 7.76234C3.1748 6.59636 3.85762 5.58213 4.72012 4.71963C5.58262 3.85713 6.59685 3.17432 7.76283 2.67119C8.9288 2.16807 10.1746 1.9165 11.5003 1.9165C12.826 1.9165 14.0719 2.16807 15.2378 2.67119C16.4038 3.17432 17.418 3.85713 18.2805 4.71963C19.143 5.58213 19.8258 6.59636 20.329 7.76234C20.8321 8.92831 21.0837 10.1741 21.0837 11.4998C21.0837 12.8255 20.8321 14.0714 20.329 15.2373C19.8258 16.4033 19.143 17.4175 18.2805 18.28C17.418 19.1425 16.4038 19.8254 15.2378 20.3285C14.0719 20.8316 12.826 21.0832 11.5003 21.0832ZM11.5003 19.1665C13.6406 19.1665 15.4535 18.4238 16.9389 16.9384C18.4243 15.453 19.167 13.6401 19.167 11.4998C19.167 9.35956 18.4243 7.54671 16.9389 6.0613C15.4535 4.57588 13.6406 3.83317 11.5003 3.83317C9.36005 3.83317 7.5472 4.57588 6.06178 6.0613C4.57637 7.54671 3.83366 9.35956 3.83366 11.4998C3.83366 13.6401 4.57637 15.453 6.06178 16.9384C7.5472 18.4238 9.36005 19.1665 11.5003 19.1665Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.room .info .list ul li .item {
+    display: flex;
+}
+.room .info .list ul li.list01 .item_wrap .item strong {
+    width: 100px;
+    white-space: nowrap;
+}
+.room .info .list ul li.list03 .item_wrap .item strong {
+    width: 120px;
+    white-space: nowrap;
+}
+.room .info a {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 9px 20px;
+    margin: 0 0 55px 0;
+}
+.room .info a:hover {
+    background-color: #fff;
+    color: #555;
+}
+.room .info .photo {
+    height: 238px;
+    overflow: hidden;
+}
 footer {
     margin: 500px 0 0 0;
 }
