@@ -11,162 +11,141 @@
 
 
     <script src="js/main.js"></script>
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <title>솜니움트리</title>
 </head>
 <body>
-     <!-- 배경이 흰색이라 header나 다른 요소가 검은색 
-         모바일에서 스크롤되면 header에 fixed 클래스 추가 -->
     <div id="wrap">
-        <header class="menu_open">
-            <h1 class="logo"><a href="index.html"><span class="blind">솜니움트리</span></a></h1>
+        <header>
+            <h1 class="logo"><a href="#"><span class="blind">솜니움트리</span></a></h1>
             <nav class="gnb">
                 <button class="gnb_open"><span class="blind">메뉴열기</span></button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
-                        <li>
-                            <a href="#"><span>ABOUT</span></a>
-                            <ul class="depth2">
-                                <li><a href="#"><span>인사말</span></a></li>
-                                <li><a href="#"><span>건축이야기</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>ROOMS</span></a>
-                            <ul class="depth2">
-                                <li><a href="#"><span>독채 풀빌라</span></a></li>
-                                <li><a href="#"><span>황토 하우스</span></a></li>
-                                <li><a href="#"><span>솜니움 하우스</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>SPECIAL</span></a>
-                            <ul class="depth2">
-                                <li><a href="#"><span>공용 수영장</span></a></li>
-                                <li><a href="#"><span>개별 수영장</span></a></li>
-                                <li><a href="#"><span>개별 바베큐</span></a></li>
-                                <li><a href="#"><span>개별 스파</span></a></li>
-                                <li><a href="#"><span>보트 대여</span></a></li>
-                                <li><a href="#"><span>어촌체험</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>RESERVE</span></a>
-                            <ul class="depth2">
-                                <li><a href="#"><span>예약하기</span></a></li>
-                                <li><a href="#"><span>예약안내</span></a></li>
-                                <li><a href="#"><span>실시간 예약</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>TRAVEL</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span>LOCATION</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span>COMMUNITY</span></a>
-                            <ul class="depth2">
-                                <li><a href="#"><span>공지사항</span></a></li>
-                                <li><a href="#"><span>FAQ</span></a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">ROOMS</a></li>
+                        <li><a href="#">SPECIAL</a></li>
+                        <li><a href="#">RESERVE</a></li>
+                        <li><a href="#">TRAVEL</a></li>
+                        <li><a href="#">LOCATION</a></li>
+                        <li><a href="#">COMMUNITY</a></li>
                     </ul>
                 </div>
-                <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+                <button class="gnb_close"><span>메뉴닫기</span></button>
             </nav>
             <div class="util">
-                <div class="calen">
-                    <button class="calen_open"><span class="blind">calender</span></button>
-                </div><!--//calen-->
-                <div class="search">
-                    <button class="search_open"><span class="blind">검색</span></button>
-                </div><!--//search-->
-            </div><!--//util-->
+                <a href="#" class="calendar"><span class="blind">스케쥴</span></a>
+                <a href="#" class="search"><span class="blind">검색</span></a>
+            </div>
         </header>
         <main class="container">
             <section class="visual">
-                <h2 class="blind">팝업</h2>
-                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
-                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
-                        <li class="swiper-slide">
-                            <div class="photo"><img src="images/visual01.jpg" alt=""></div>
-                            <div class="visual_txt">
-                                <div class="wrapper">
-                                    <h3>“ Somnium tree ”</h3>
-                                    <p>종합적 숙박 형태로 오시는 고객분들의 개성과 숙박 목적에 맞게 선택할 수 있는<br>또 하나의 휴식과 힐링의 지도를 그린 곳 “솜니움 트리”</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="photo"><img src="images/visual02.jpg" alt=""></div>
-                            <div class="visual_txt">
-                                <div class="wrapper">
-                                    <h3>“ Somnium tree ”</h3>
-                                    <p>Somnium tree'는 라틴어로 '꿈꾸는'이라는 의미의 'Somnium'과 영어로 '나무'라는 뜻의<br>'tree'가 합하여 만들어진 '꿈꾸는 나무'라는 합성어입니다.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="photo"><img src="images/visual03.jpg" alt=""></div>
-                            <div class="visual_txt">
-                                <div class="wrapper">
-                                    <h3>“ Somnium tree ”</h3>
-                                    <p>종합적 숙박 형태로 오시는 고객분들의 개성과 숙박 목적에 맞게 선택할 수 있는<br>또 하나의 휴식과 힐링의 지도를 그린 곳 “솜니움 트리”</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="paging"></div>
-                    <button class="btn_prev"><span class="blind">이전 팝업보기</span></button>
-                    <button class="btn_next"><span class="blind">다음 팝업보기</span></button>
-                </div><!--swiper-->
-                <div class="reserve">
-                    <div class="wrapper">
+                <div class="wrapper">
+                    <h2>“ Somnium tree ”</h2>
+                    <p>종합적 숙박 형태로 오시는 고객분들의 개성과 숙박 목적에 맞게 선택할 수 있는<br>또 하나의 휴식과 힐링의 지도를 그린 곳 “솜니움 트리”</p>
+                    <div class="checkin">
                         <h3>실시간 예약</h3>
-                        <div class="reserve_date">
-                            <strong>CHECK IN / OUT</strong>
-                            <p>2025 . 06 . 28 토 - 2025 . 06 . 30 월</p>
-                        </div>
-                        <div class="reserve_info">
-                            <strong>ROOM / GUEST</strong>
-                            <div class="numbers">
-                              <span class="room-number">1</span>
-                              <span class="guest-number">5</span>
+                        <div class="time_wrap">
+                            <strong>CHECK IN/OUT</strong>
+                            <span>2025 . 06 . 28 토 - 2025 . 06 . 30 월</span>
+                        </div><!--time_wrap-->
+                        <div class="count">
+                            <div class="item">
+                                <strong>ROOM</strong>
+                                <span>1</span>
                             </div>
-                          </div>
-                        <div class="check"><a href="#">SERCH</a></div>
-                    </div>
-                </div><!--reserve-->
-                <div class="scroll_down">
-                    <div class="txt">scroll down</div>
+                            <div class="item m_no">/</div>
+                            <div class="item">
+                                <strong class="item_gue">GUEST</strong>
+                                <span>5</span>
+                         </div>
+                        </div><!--count-->
+                        <button class="search">SEARCH</button>
+                    </div><!--checkin-->
                 </div>
             </section>
-            <section class="intro">
+            <section class="about">
                 <div class="wrapper">
                     <div class="txt">
-                        <div class="tit">
-                            <h2>About</h2>  
-                        </div>      
-                        <div class="sub_tit">
-                            <p>바다를 품은 공간,<br>바람이 스치는 안락함.</p>
-                        </div>
-                        <span>Somnium Tree, 꿈꾸는 나무.<br>꿈처럼 포근하고, 나무처럼 단단한 쉼을 담았습니다.<br>바다를 향해 열린 창과, 바람이 흐르는 공간에서<br>당신의 하루가 고요하게 머물기를 바랍니다.</span>
+                        <strong>About</strong>
+                        <h2>바다를 품은 공간,<br>바람이 스치는 안락함.</h2>
+                        <p>Somnium Tree, 꿈꾸는 나무.<br>꿈처럼 포근하고, 나무처럼 단단한 쉼을 담았습니다.<br>바다를 향해 열린 창과, 바람이 흐르는 공간에서<br>당신의 하루가 고요하게 머물기를 바랍니다.</p>
+                        <a href="#"><span>OUR STORY</span></a>
                     </div>
-                    <div class="photo"><img src="images/intro_img.jpg" alt="소개 사진"></div>
-                    <div class="more"><a href="#">OUR STORY</a></div>
+                    <div class="photo"><img src="images/intro_img.jpg" alt=""></div>
                 </div>
             </section>
-            <section class="room"></section>
+            <section class="room">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>객실안내</h2>
+                        <div class="list">
+                            <ul>
+                                <li class="active"><button>두드림</button></li>
+                                <li><button>들림</button></li>
+                                <li><button>누림</button></li>
+                                <li><button>어울림</button></li>
+                                <li><button>황토하우스</button></li>
+                                <li><button>솜니움하우스 TOP</button></li>
+                                <li><button>솜니움하우스</button></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="more">DETAIL VIEW</a>
+                    </div>
+                    <div class="info">
+                        <h3>ROOM INFO</h3>
+                        <h4>두드림 (독채 풀빌라)</h4>
+                        <div class="list">
+                            <ul>
+                                <li class="list01">
+                                    <h5>평수</h5>
+                                    <div class="item_wrap">
+                                        <div class="item">
+                                            <strong>내부공간</strong>
+                                            <span>40평</span>
+                                        </div>
+                                        <div class="item">
+                                            <strong>외부공간</strong>
+                                            <span>70평</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list02">
+                                    <h5>인원</h5>
+                                    <div class="item_wrap">
+                                        <div class="item">
+                                            <strong>최소 4명 - 최대 6명</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list03">
+                                    <h5>요금</h5>
+                                    <div class="item_wrap">
+                                        <div class="item">
+                                            <strong>주중 (일-월)</strong>
+                                            <span>130,000원</span>
+                                        </div>
+                                        <div class="item">
+                                            <strong>금요일</strong>
+                                            <span>150,000원</span>
+                                        </div>
+                                        <div class="item">
+                                            <strong>토요일</strong>
+                                            <span>160,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!--list-->
+                    </div><!--info-->
+                </div>
+            </section>
             <section class="special"></section>
-            <div class="travel">
-
-            </div>
+            <section class="travel"></section>
         </main>
+        <footer></footer>
     </div>
-    <footer>
-        <div class="wrapper"></div>
-    </footer>
 </body>
 </html>
