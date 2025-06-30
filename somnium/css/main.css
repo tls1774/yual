@@ -393,6 +393,16 @@ header .util .search {
     justify-content: space-between;
     padding: 0 383px 0 0;
 }
+.room .info {
+    position: relative;
+    padding: 0 0 0 83px;
+}
+.room .info h3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotate(90deg);
+}
 
 footer {
     margin: 500px 0 0 0;
