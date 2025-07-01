@@ -1010,6 +1010,21 @@ footer .f_info .group {
 footer .f_info .group:last-child {
     margin-bottom: 72px;
 }
+footer .f_info .group span {
+    position: relative;
+}
+footer .f_info .group span::after {
+    content: "";
+    position: absolute;
+    right: -29px;
+    top: 5px;
+    width: 1px;
+    height: 12px;
+    background-color:rgba(255, 255, 255, 0.3);
+}
+footer .f_info .group span.end::after {
+    display: none;
+}
 footer .copyright {
     color: rgba(255, 255, 255, 0.6);
     font-size: 15px;
