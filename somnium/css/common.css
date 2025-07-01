@@ -73,21 +73,21 @@ html, body {
     --point-color: #042536;
     --bold-weight: 700;
     --tit-line-height: 1.2;
-    --tit-size: 2.65rem; /* 45px/17 = 2.65 */
+    --tit-size: 45px; 
     --sub-tit-size: 22px; /* 25px/17 = 1.47 */
 }
 @media screen and (max-width:1024px){
     :root {
         --header-h: 56px; /* header 높이 */
         --header-h-m: -56px;
-        --tit-size: 2.06rem; /* 35px/17 = 2.06 */
-        --sub-tit-size: 1.29rem; /* 22px/17 = 1.29 */
-        --display-size: 2.65rem; /* 45/17 = 2.65 */
+        --tit-size: 35px; 
+        --sub-tit-size: 1.29rem; 
+        --display-size: 2.65rem; 
     }
 }
 @media screen and (max-width:768px){
     :root {
-        --tit-size: 1.56rem; /* 25px/16 = 1.56 */
+        --tit-size: 25px; /* 25px/16 = 1.56 */
         --sub-tit-size: 1.25rem; /* 20px/16 = 1.25 */
         --display-size: 1.875rem; /* 30/16 = 1.875 */
     }
