@@ -217,6 +217,16 @@ header .util .search {
     width: 50px;
     height: 1px;
     background-color: #fff;
+    animation: scroll_bar infinite alternate linear;
+    animation-duration: 1s;
+}
+@keyframes scroll_bar {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(50px);
+    }
 }
 @media screen and (max-width:1024px){
     .visual {
