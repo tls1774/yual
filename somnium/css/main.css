@@ -109,7 +109,7 @@ header .util .search {
 
 .visual {
     background: url(../images/visual01.jpg) no-repeat center center / cover;
-    height: 1000px;
+    height: 1000px;    /* 높이가 너무 높아서 변경 추천 */
     color: #fff;
     margin: 0 0 175px 0;
     position: relative;
@@ -123,8 +123,8 @@ header .util .search {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);   /* safari에서 지원안돼서 배경이 너무 연함 */
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin: 77px 0 0 0;
@@ -649,7 +649,7 @@ header .util .search {
     .room .info {
         width: calc(100% + 40px);
         padding: 0 76px 0 76px;
-        height: 420px;
+        height: 450px;
         text-align: center;
         transform: translateX(-20px);
     }
@@ -659,7 +659,7 @@ header .util .search {
     .room .info h4 {
         font-size: 20px;
         margin: 0;
-        padding: 38px 0 22px 0;
+        padding: 38px 0 40px 0;
     }
     .room .info .list {
         display: none;
@@ -668,7 +668,7 @@ header .util .search {
         position: absolute;
         border-radius: 2px;
         padding: 5px 20px;
-        margin: 0 0 23px 0;
+        margin: 0 0 30px 0; /* 너무좁음 */
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
