@@ -41,7 +41,7 @@ $(document).ready(function(){
             prevEl: '.visual .ctrl_wrap button.btn_prev',  
         },
     });
-
+ /**************** visual swiper 연결 : 끝 *****************/
 
    
      /* TOP 버튼을 클릭하면 상단으로 스크롤 */
@@ -54,31 +54,32 @@ $(document).ready(function(){
 
 })
 
-        //함수의 선언 
-    function resize_chk(){
-        window_w = $(window).width()
-        //console.log(window_w)
-        if(window_w > mobile_size){ //1024보다 크면
-            device_status = 'pc'
-        }else{ //같거나 작으면
-            device_status = 'mobile'
-        }
-        //console.log(device_status)
+
+//함수의 선언 
+function resize_chk(){
+    window_w = $(window).width()
+    //console.log(window_w)
+    if(window_w > mobile_size){ //1024보다 크면
+        device_status = 'pc'
+    }else{ //같거나 작으면
+        device_status = 'mobile'
     }
-    function scroll_chk(){
-        scroll_prev = scrolling //스크롤값을 다시 계산하기 전에 이전값을 prev에 저장
-        scrolling = $(window).scrollTop()
-        console.log(scroll_prev, scrolling)
-        if(scrolling > 0){ //조금이라도 스크롤 됐으면
-            $('header').addClass('fixed')
-            if(scrolling > scroll_prev){
-                console.log('내려가는 중!!!!!!!!!!!!!!')
-                $('header').addClass('gnb_up')
-            }else{
-                // console.log('올라가는 중!!!!!!!!!!!!!!')
-                $('header').removeClass('gnb_up')
-            }
-        }else{ //0일때
-            $('header').removeClass('fixed')
+    //console.log(device_status)
+}
+function scroll_chk(){
+    scroll_prev = scrolling //스크롤값을 다시 계산하기 전에 이전값을 prev에 저장
+    scrolling = $(window).scrollTop()
+    console.log(scroll_prev, scrolling)
+    if(scrolling > 0){ //조금이라도 스크롤 됐으면
+        $('header').addClass('fixed')
+        if(scrolling > scroll_prev){
+            // console.log('내려가는 중!!!!!!!!!!!!!!')
+            $('header').addClass('gnb_up')
+        }else{
+            // console.log('올라가는 중!!!!!!!!!!!!!!')
+            $('header').removeClass('gnb_up')
         }
+    }else{ //0일때
+        $('header').removeClass('fixed')
     }
+}
