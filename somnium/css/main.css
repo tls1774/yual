@@ -123,8 +123,8 @@ header .util .search {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);   /* safari에서 지원안돼서 배경이 너무 연함 */
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);  
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin: 77px 0 0 0;
@@ -384,6 +384,9 @@ header .util .search {
     object-fit: cover;
 }
 @media screen and (max-width:1024px){
+    .about {
+        margin: 0 0 92px 0;
+    }
     .about .wrapper {
         display: block;
     }
@@ -419,6 +422,11 @@ header .util .search {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+@media screen and (max-width:768px){
+    .about {
+        margin: 0 0 82px 0;
     }
 }
 .room {
@@ -488,7 +496,7 @@ header .util .search {
 .room .info {
     position: relative;
     width: 564px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     padding: 0 83px 0 83px;
     height: 1000px;
@@ -659,7 +667,7 @@ header .util .search {
     .room .info h4 {
         font-size: 20px;
         margin: 0;
-        padding: 38px 0 40px 0;
+        padding: 38px 0 22px 0;
     }
     .room .info .list {
         display: none;
@@ -668,20 +676,13 @@ header .util .search {
         position: absolute;
         border-radius: 2px;
         padding: 5px 20px;
-        margin: 0 0 30px 0; /* 너무좁음 */
+        margin: 0 0 38px 0;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     }
     .room .info .photo {
         height: 250px;
-        overflow: hidden;
-        position: relative;
-    }
-    .room .info .photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 }
 @media screen and (max-width:768px){
@@ -695,19 +696,16 @@ header .util .search {
         font-size: 16px;
     }
     .room .info {
-        width: calc(100% + 40px);
-        padding: 0 76px 0 76px;
-        height: 313px;
+        height: 350px;
+    }
+    .room .info h4 {
+        padding: 33px 0 18px 0;
+    }
+    .room .info a {
+        margin: 0 0 27px 0;
     }
     .room .info .photo {
-        height: 138px;
-        overflow: hidden;
-        position: relative;
-    }
-    .room .info .photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 185px;
     }
 }
 .special {
@@ -952,7 +950,6 @@ header .util .search {
 }
 .travel {
     background: url(../images/travel_img.jpg) no-repeat center center / cover;
-    height: 444px;
     color: #fff;
 } 
 .travel .wrapper {
@@ -979,7 +976,7 @@ header .util .search {
     border: 1px solid #fff;
     border-radius: 2px;
     padding: 15px 80px;
-    margin: 35px 0 0 0;
+    margin: 35px 0 127px 0;
 }
 .travel .btn_travel:hover {
     background-color: #fff;
@@ -989,23 +986,25 @@ header .util .search {
     .travel h3 {
         font-size: 30px;
     }
+    .travel .btn_travel {
+        margin: 28px 0 114px 0;
+    }
 }
 @media screen and (max-width: 768px) {   
         .travel {
-            height: 532px;
             text-align: center;
         } 
         .travel h3 {
             font-size: 20px;
-            margin: 166px 0 10px 0;
+            margin: 166px 0 13px 0;
         }
         .travel h3::before {
             top: -166px;
             height: 80px;
         }
         .travel .btn_travel {
-            padding: 14px 50px;
-            margin: 28px 0 0 0;
+            padding: 12px 50px;
+            margin: 38px 0 207px 0;
         }
 }
 footer {
@@ -1086,7 +1085,7 @@ footer .copyright {
 }
 @media screen and (max-width: 1024px) {
     footer {
-        padding: 114px 0 120px 0;
+        padding: 114px 0 130px 0;
     }
     footer .top {
         top: 95px;
@@ -1113,7 +1112,7 @@ footer .copyright {
 }
 @media screen and (max-width: 768px) {
     footer {
-        padding: 74px 0 95px 0;
+        padding: 74px 0 100px 0;
     }
     footer .top {
         right: 40px;
