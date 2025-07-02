@@ -92,3 +92,7 @@ html, body {
         --display-size: 1.875rem; /* 30/16 = 1.875 */
     }
 }
+::selection {
+    color: #fff;
+    background-color: #677333;
+}
