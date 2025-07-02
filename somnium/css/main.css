@@ -112,6 +112,7 @@ header .util .search {
     height: 1000px;
     color: #fff;
     margin: 0 0 175px 0;
+    position: relative;
 }
 .visual h2 {
     font-size: 60px;
@@ -189,6 +190,34 @@ header .util .search {
     color: #555;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.visual .scroll_down {
+    position: absolute; /* visual을 기준으로 정렬 */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    right: 20px;
+    bottom: 9.8%;
+    z-index: 10;
+    color: #fff;
+    transform: rotate(90deg) translate(-50%, -50%);
+}
+.visual .scroll_down::after {
+    content: "";
+    position: absolute;
+    right: -111px;
+    bottom: 12px;
+    width: 102px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.visual .scroll_down::before {
+    content: "";
+    position: absolute;
+    right: -60px;
+    bottom: 12px;
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+}
 @media screen and (max-width:1024px){
     .visual {
         margin: 0 0 100px 0;
@@ -226,8 +255,11 @@ header .util .search {
         border-radius: 5px;
         padding: 8px 41px;
         margin-left: 3%;
+    }  
+    .visual .scroll_down {
+        display: none;
     }
-}
+}    
 @media screen and (max-width:768px){
     .visual {
         height: 604px;
@@ -680,8 +712,7 @@ header .util .search {
 }
 .special {
     background: url(../images/special_bg.jpg) no-repeat center center / cover;
-    height: 814px;
-    padding: 175px 0 0 0;    
+    padding: 175px 0 160px 0;    
 }
 .special .special_wrap {
     position: relative;
@@ -1049,6 +1080,9 @@ footer .sns ul li.instagram a {
 }
 footer .sns ul li.youtube a {
     background-image: url("data:image/svg+xml,%3Csvg width='29' height='21' viewBox='0 0 29 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 6.58269C29 2.94313 26.1473 0 22.6375 0H6.36253C2.84471 0 0 2.95142 0 6.58269V14.4173C0 18.0568 2.85272 21 6.36253 21H22.6375C26.1553 21 29 18.0486 29 14.4173V6.58269ZM19.4241 11.0845L12.1241 14.8235C11.8356 14.981 10.866 14.7655 10.866 14.4339V6.76508C10.866 6.42517 11.8436 6.20961 12.1321 6.37542L19.1196 10.3052C19.4161 10.4793 19.7206 10.9187 19.4241 11.0845Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width: 1024px) {
     footer {
