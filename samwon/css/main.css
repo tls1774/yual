@@ -3,3 +3,232 @@
 @import url(font.css);
 @import url(common.css);
 
+header {
+    position: fixed; /* body를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--header-h);
+    padding: 0 90px;
+    display: flex; /* logo, gnb, util 좌우 */
+    justify-content: space-between;
+    align-items: center;
+    color: #1d1d1d;
+   
+    transition: top 0.5s;
+}
+header .logo a {
+    display: block;
+    width: 244px;
+    height: 45px;
+    background: url(../images/logo.svg) no-repeat center center / contain;
+}
+header .util {
+    display: flex;
+    gap: 10px;
+}
+header .util .lang .lang_open {
+    padding: 0 15px 0 22px;
+    position: relative; /* before 정렬의 기준 */
+}
+header .util .lang .lang_open::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 15C6.47171 15 5.50132 14.8029 4.58882 14.4087C3.67632 14.0145 2.88053 13.4778 2.20145 12.7986C1.52224 12.1195 0.985527 11.3237 0.591316 10.4112C0.197105 9.49868 0 8.52829 0 7.5C0 6.46355 0.197105 5.49112 0.591316 4.5827C0.985527 3.67428 1.52224 2.88053 2.20145 2.20145C2.88053 1.52224 3.67632 0.985527 4.58882 0.591316C5.50132 0.197106 6.47171 0 7.5 0C8.53645 0 9.50888 0.197106 10.4173 0.591316C11.3257 0.985527 12.1195 1.52224 12.7986 2.20145C13.4778 2.88053 14.0145 3.67428 14.4087 4.5827C14.8029 5.49112 15 6.46355 15 7.5C15 8.52829 14.8029 9.49868 14.4087 10.4112C14.0145 11.3237 13.4778 12.1195 12.7986 12.7986C12.1195 13.4778 11.3257 14.0145 10.4173 14.4087C9.50888 14.8029 8.53645 15 7.5 15ZM7.5 13.799C7.90289 13.2647 8.24197 12.7257 8.51724 12.1822C8.7925 11.6386 9.01671 11.0445 9.18987 10.3997H5.81013C5.99342 11.0647 6.2202 11.669 6.49046 12.2126C6.76059 12.7561 7.09711 13.2849 7.5 13.799ZM5.97118 13.5819C5.66855 13.1477 5.39678 12.6541 5.15586 12.1011C4.91493 11.5479 4.7277 10.9808 4.59414 10.3997H1.91605C2.33303 11.2196 2.89224 11.9084 3.59368 12.4662C4.29513 13.0238 5.08763 13.3957 5.97118 13.5819ZM9.02882 13.5819C9.91237 13.3957 10.7049 13.0238 11.4063 12.4662C12.1078 11.9084 12.667 11.2196 13.0839 10.3997H10.4059C10.2469 10.9858 10.047 11.5554 9.80605 12.1086C9.56526 12.6617 9.30618 13.1528 9.02882 13.5819ZM1.41947 9.21553H4.35434C4.30474 8.92211 4.26875 8.63441 4.24638 8.35243C4.22414 8.07059 4.21303 7.78645 4.21303 7.5C4.21303 7.21355 4.22414 6.92941 4.24638 6.64757C4.26875 6.36559 4.30474 6.0779 4.35434 5.78447H1.41947C1.34355 6.05263 1.28539 6.33145 1.245 6.62092C1.20447 6.9104 1.18421 7.20342 1.18421 7.5C1.18421 7.79658 1.20447 8.08961 1.245 8.37908C1.28539 8.66855 1.34355 8.94737 1.41947 9.21553ZM5.53836 9.21553H9.46165C9.51112 8.92211 9.54704 8.63697 9.56941 8.36013C9.59164 8.08329 9.60276 7.79658 9.60276 7.5C9.60276 7.20342 9.59164 6.91671 9.56941 6.63987C9.54704 6.36303 9.51112 6.0779 9.46165 5.78447H5.53836C5.48888 6.0779 5.45296 6.36303 5.43059 6.63987C5.40836 6.91671 5.39724 7.20342 5.39724 7.5C5.39724 7.79658 5.40836 8.08329 5.43059 8.36013C5.45296 8.63697 5.48888 8.92211 5.53836 9.21553ZM10.6457 9.21553H13.5805C13.6564 8.94737 13.7146 8.66855 13.755 8.37908C13.7955 8.08961 13.8158 7.79658 13.8158 7.5C13.8158 7.20342 13.7955 6.9104 13.755 6.62092C13.7146 6.33145 13.6564 6.05263 13.5805 5.78447H10.6457C10.6953 6.0779 10.7312 6.36559 10.7536 6.64757C10.7759 6.92941 10.787 7.21355 10.787 7.5C10.787 7.78645 10.7759 8.07059 10.7536 8.35243C10.7312 8.63441 10.6953 8.92211 10.6457 9.21553ZM10.4059 4.60026H13.0839C12.662 3.77026 12.1066 3.08145 11.4178 2.53382C10.7289 1.98632 9.93263 1.61184 9.02882 1.4104C9.33145 1.86987 9.60066 2.37243 9.83645 2.91809C10.0724 3.46362 10.2622 4.02434 10.4059 4.60026ZM5.81013 4.60026H9.18987C9.00658 3.94026 8.77605 3.33217 8.49829 2.77599C8.2204 2.2198 7.88763 1.6948 7.5 1.20099C7.11237 1.6948 6.77961 2.2198 6.50171 2.77599C6.22395 3.33217 5.99342 3.94026 5.81013 4.60026ZM1.91605 4.60026H4.59414C4.73783 4.02434 4.92763 3.46362 5.16355 2.91809C5.39934 2.37243 5.66855 1.86987 5.97118 1.4104C5.06224 1.61184 4.26467 1.98763 3.57849 2.53776C2.89217 3.08776 2.33803 3.77526 1.91605 4.60026Z' fill='%23002F87'/%3E%3C/svg%3E%0A");
+}
+header .util .lang .lang_open::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_2077' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_2077)'%3E%3Cpath d='M7.50034 9.17344C7.42502 9.17344 7.35492 9.16141 7.29002 9.13734C7.22513 9.11328 7.16341 9.07203 7.10487 9.01359L4.29596 6.20469C4.2095 6.11813 4.16523 6.00932 4.16315 5.87828C4.16117 5.74734 4.20544 5.63656 4.29596 5.54594C4.38659 5.45542 4.49638 5.41016 4.62534 5.41016C4.7543 5.41016 4.86409 5.45542 4.95471 5.54594L7.50034 8.09172L10.046 5.54594C10.1325 5.45948 10.2413 5.41521 10.3724 5.41313C10.5033 5.41115 10.6141 5.45542 10.7047 5.54594C10.7952 5.63656 10.8405 5.74635 10.8405 5.87531C10.8405 6.00427 10.7952 6.11406 10.7047 6.20469L7.89581 9.01359C7.83726 9.07203 7.77554 9.11328 7.71065 9.13734C7.64575 9.16141 7.57565 9.17344 7.50034 9.17344Z' fill='%23002F87'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+header .util .search .search_open {
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_2067' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_2067)'%3E%3Cpath d='M8.72674 14.3133C7.16138 14.3133 5.83573 13.7704 4.74978 12.6847C3.66399 11.5987 3.12109 10.2731 3.12109 8.7077C3.12109 7.14234 3.66399 5.81668 4.74978 4.73074C5.83573 3.64495 7.16138 3.10205 8.72674 3.10205C10.2921 3.10205 11.6178 3.64495 12.7037 4.73074C13.7895 5.81668 14.3324 7.14234 14.3324 8.7077C14.3324 9.36235 14.2225 9.98759 14.0028 10.5834C13.783 11.1793 13.4897 11.6975 13.1231 12.1381L18.3976 17.4126C18.5245 17.5394 18.5895 17.6989 18.5924 17.8911C18.5953 18.0833 18.5303 18.2458 18.3976 18.3785C18.2648 18.5113 18.1038 18.5777 17.9145 18.5777C17.7254 18.5777 17.5644 18.5113 17.4316 18.3785L12.1571 13.104C11.6988 13.4825 11.1717 13.7786 10.5759 13.9925C9.98005 14.2064 9.36367 14.3133 8.72674 14.3133ZM8.72674 12.9386C9.90786 12.9386 10.9083 12.5287 11.7279 11.7089C12.5477 10.8892 12.9576 9.88882 12.9576 8.7077C12.9576 7.52657 12.5477 6.52618 11.7279 5.70653C10.9083 4.88672 9.90786 4.47682 8.72674 4.47682C7.54561 4.47682 6.54523 4.88672 5.72557 5.70653C4.90577 6.52618 4.49586 7.52657 4.49586 8.7077C4.49586 9.88882 4.90577 10.8892 5.72557 11.7089C6.54523 12.5287 7.54561 12.9386 8.72674 12.9386Z' fill='%23002F87'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 2px 0 0 0;
+}
+/*************** 아래로 스크롤 내릴때 header가 사라짐 ***********************/
+header.fixed.gnb_up {
+    top: var(--header-h-m);
+}
+header.fixed.gnb_up.menu_over {
+    top: 0;
+}
+header.fixed,
+header.menu_over  {
+    background-color: #fff;
+}
+/****************************/
+header .gnb .gnb_util,
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /* 모바일에서만 숨김 */
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 > li {
+    width: 150px;
+    text-align: center;
+    position: relative; /* depth2 정렬의 기준 */
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    display: block;
+    line-height: var(--header-h);
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+header .gnb .gnb_wrap ul.depth1 > li.over > a {
+    color: var(--main-color);
+}
+header .gnb .gnb_wrap ul.depth1 > li.over > a > span {
+    position: relative; /* after 정렬의 기준 */
+}
+header .gnb .gnb_wrap ul.depth1 > li > a > span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: none;
+}
+/* 나타날 때만 밑에 줄 애니메이션 */
+header .gnb .gnb_wrap ul.depth1 > li.over > a > span::after {
+  animation: drawUnderline 0.3s ease forwards;
+}
+/* 애니메이션 정의 */
+@keyframes drawUnderline {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+
+    position: absolute;
+    left: 0;
+    top: var(--header-h);
+    width: 100%;
+    padding-top: 20px;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+    display: block;
+    color: var(--base-color);
+    line-height: 2;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a:hover {
+    font-weight: var(--bold-weight);
+    color: var(--main-color);
+}
+ /************ menu_over 추가시 *************/
+header.menu_over::before {
+    content: "";
+    position: absolute; /* header를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: -1; 
+    /* header 안에 있는 요소들 중에 맨 아래 
+        header에 배경색을 줘도 그거보다는 위에 존재함 */
+    width: 100%;
+    height: 451px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.05);
+
+    transition: all 0.4s ease;
+}
+header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+    /* 2차하위메뉴 부드럽게 나타나는 애니메이션 */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+/************************ visual *************************/
+.visual .visual_tit_box {
+    display: flex;
+    text-align: center;
+}
+.visual .visual_tit_box h3 {
+    font-size: 75px;
+    margin: 145px 0 24px 0;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.visual .visual_tit_box h3 span {
+    color: var(--point-color);
+}
+.visual .swiper {
+    position: relative;
+    margin: 0 60px;
+}
+.visual .swiper-slide .photo {
+    overflow: hidden;
+    min-height: 600px;
+}
+.visual .swiper-slide .photo img {
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1.5s;
+}
+.visual .swiper-slide .txt_wrap {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.visual .swiper-slide .txt_wrap h4 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 89px 0 13px 0;
+}
+.visual .swiper-slide .txt_wrap p {
+    font-size: 20px;
+}
+.visual .scroll {
+    position: absolute;
+    top: 0;
+    right: 0;  
+    background: #fff; 
+    padding: 0 96px 0 0;
+    transform: rotate(90deg)
+
+}
+
+
+
+footer {
+    margin: 500px 0 0 0;
+}
