@@ -694,9 +694,12 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
   color: var(--tit-color);
   margin: 12px 0 62px 0;
 }
-.news .list ul li a .subject{
+.news .list ul li a {
   display: flex;
   justify-content: space-between;
+}
+.news .list ul li a .subject {
+  display: flex;
 }
 footer {
     margin: 500px 0 0 0;
