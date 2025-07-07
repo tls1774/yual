@@ -662,6 +662,42 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     top: 40px;
     width: calc(100% - 56px); /*왼쪽여백 오른쪽여백 합*/
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.news {
+  background-color: #F9FAFB;
+  padding: 116px 0 129px 0;
+}
+.news .tit h2 {
+  font-weight: var(--bold-weight);
+  color: var(--main-color);
+}
+.news .tit p {
+  font-size: 60px;
+  font-weight: var(--bold-weight);
+  color: var(--tit-color);
+  margin: 12px 0 62px 0;
+}
+.news .list ul li a .subject{
+  display: flex;
+  justify-content: space-between;
+}
 footer {
     margin: 500px 0 0 0;
 }
