@@ -67,7 +67,6 @@ header .util .search .search_open {
 header .util .lang .lang_open:hover {
     text-decoration: underline;
 }
-
 /*************** 아래로 스크롤 내릴때 header가 사라짐 ***********************/
 header.fixed.gnb_up {
     top: var(--header-h-m);
@@ -80,7 +79,7 @@ header.menu_over  {
     background-color: #fff;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.05);
 }
-
+/****************************/
 header .gnb .gnb_util,
 header .gnb .gnb_open,
 header .gnb .gnb_close {
@@ -132,15 +131,14 @@ header .gnb .gnb_wrap ul.depth1 > li.over > a > span::after {
     transform: scaleX(1);
   }
 }
-
 header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
-   position: absolute;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.4s ease;
     pointer-events: none;
 
+    position: absolute;
     left: 0;
     top: var(--header-h);
     width: 100%;
@@ -163,7 +161,7 @@ header.menu_over::before {
     top: 0;
     z-index: -1; 
     /* header 안에 있는 요소들 중에 맨 아래 
-    header에 배경색을 줘도 그거보다는 위에 존재함 */
+        header에 배경색을 줘도 그거보다는 위에 존재함 */
     width: 100%;
     height: 451px;
     background-color: #fff;
@@ -281,7 +279,7 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 }
 .visual .ctrl_wrap .progress-bar {
   position: relative;
-  width: 1080px; /* 숫자+버튼 너비 제외한 나머지 프로그레스 바 넓이  ??????????????????????*/
+  width: 1080px; /* 숫자+버튼 너비 제외한 나머지 프로그레스 바 넓이 조정 */
   height: 3px;
   background: rgba(255,255,255,0.3);
   border-radius: 2px;
@@ -345,11 +343,6 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     transform: translateX(6px); /* 오른쪽으로 이동 */
   }
 }
-
-@media screen and (max-width:1330px){
-
-}
-
 
 
 /******************************** product ******************************/
