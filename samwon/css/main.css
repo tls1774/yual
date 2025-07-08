@@ -121,7 +121,7 @@ header .gnb .gnb_wrap ul.depth1 > li > a > span::after {
 }
 /* 나타날 때만 밑에 줄 애니메이션 */
 header .gnb .gnb_wrap ul.depth1 > li.over > a > span::after {
-  animation: drawUnderline 0.3s ease forwards;
+    animation: drawUnderline 0.3s ease forwards;
 }
 /* 애니메이션 정의 */
 @keyframes drawUnderline {
@@ -134,7 +134,7 @@ header .gnb .gnb_wrap ul.depth1 > li.over > a > span::after {
 }
 
 header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
-   position: absolute;
+    position: absolute;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
@@ -295,17 +295,17 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     color: var(--point-color);
 }
 .visual .swiper .swiper-slide {
-  height: 600px;
-  border-radius: 50px;
+    height: 600px;
+    border-radius: 50px;
 }
 .visual .swiper .swiper-slide.bg1 {
-  background: url(../images/visual01.jpg) no-repeat center center / cover;
+     background: url(../images/visual01.jpg) no-repeat center center / cover;
 }
 .visual .swiper .swiper-slide.bg2 {
-  background: url(../images/visual02.jpg) no-repeat center center / cover;
+     background: url(../images/visual02.jpg) no-repeat center center / cover;
 }
 .visual .swiper .swiper-slide.bg3 {
-  background: url(../images/visual03.jpg) no-repeat center center / cover;
+    background: url(../images/visual03.jpg) no-repeat center center / cover;
 }
 
 .visual .swiper-slide .txt_wrap {
@@ -352,50 +352,50 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 }
 
 .visual .ctrl_wrap .left-controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
 }
 .visual .ctrl_wrap .left-controls .btn_prev,
 .visual .ctrl_wrap .left-controls .btn_next {
-  width: 26px;
-  height: 26px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 }
 .visual .ctrl_wrap .left-controls .btn_prev {
-  background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_997' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='26' height='26'%3E%3Crect width='26' height='26' transform='matrix(0 -1 -1 -4.37114e-08 26 26)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_997)'%3E%3Cpath d='M10.0995 13.0001C10.0995 13.1306 10.1204 13.2522 10.1621 13.3646C10.2038 13.4771 10.2753 13.5841 10.3766 13.6856L15.2454 18.5543C15.3954 18.7042 15.584 18.7809 15.8111 18.7846C16.0381 18.788 16.2301 18.7113 16.3872 18.5543C16.5441 18.3973 16.6226 18.207 16.6226 17.9834C16.6226 17.7599 16.5441 17.5696 16.3872 17.4125L11.9745 13.0001L16.3872 8.58768C16.5371 8.43764 16.6138 8.24905 16.6174 8.02191C16.6208 7.79496 16.5441 7.60293 16.3872 7.44585C16.2301 7.28895 16.0398 7.2105 15.8163 7.2105C15.5928 7.2105 15.4025 7.28895 15.2454 7.44585L10.3766 12.3146C10.2753 12.4161 10.2038 12.5231 10.1621 12.6356C10.1204 12.748 10.0995 12.8696 10.0995 13.0001Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_997' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='26' height='26'%3E%3Crect width='26' height='26' transform='matrix(0 -1 -1 -4.37114e-08 26 26)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_997)'%3E%3Cpath d='M10.0995 13.0001C10.0995 13.1306 10.1204 13.2522 10.1621 13.3646C10.2038 13.4771 10.2753 13.5841 10.3766 13.6856L15.2454 18.5543C15.3954 18.7042 15.584 18.7809 15.8111 18.7846C16.0381 18.788 16.2301 18.7113 16.3872 18.5543C16.5441 18.3973 16.6226 18.207 16.6226 17.9834C16.6226 17.7599 16.5441 17.5696 16.3872 17.4125L11.9745 13.0001L16.3872 8.58768C16.5371 8.43764 16.6138 8.24905 16.6174 8.02191C16.6208 7.79496 16.5441 7.60293 16.3872 7.44585C16.2301 7.28895 16.0398 7.2105 15.8163 7.2105C15.5928 7.2105 15.4025 7.28895 15.2454 7.44585L10.3766 12.3146C10.2753 12.4161 10.2038 12.5231 10.1621 12.6356C10.1204 12.748 10.0995 12.8696 10.0995 13.0001Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .visual .ctrl_wrap .left-controls .btn_next {
-  background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_1002' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='26' height='26'%3E%3Crect y='26' width='26' height='26' transform='rotate(-90 0 26)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_1002)'%3E%3Cpath d='M15.9005 13.0001C15.9005 13.1306 15.8796 13.2522 15.8379 13.3646C15.7962 13.4771 15.7247 13.5841 15.6234 13.6856L10.7546 18.5543C10.6046 18.7042 10.416 18.7809 10.1889 18.7846C9.9619 18.788 9.76988 18.7113 9.6128 18.5543C9.45589 18.3973 9.37744 18.207 9.37744 17.9834C9.37744 17.7599 9.45589 17.5696 9.6128 17.4125L14.0255 13.0001L9.6128 8.58768C9.46293 8.43764 9.3862 8.24905 9.38259 8.02191C9.37916 7.79496 9.45589 7.60293 9.6128 7.44585C9.76988 7.28895 9.96018 7.2105 10.1837 7.2105C10.4072 7.2105 10.5975 7.28895 10.7546 7.44585L15.6234 12.3146C15.7247 12.4161 15.7962 12.5231 15.8379 12.6356C15.8796 12.748 15.9005 12.8696 15.9005 13.0001Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+     background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_1002' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='26' height='26'%3E%3Crect y='26' width='26' height='26' transform='rotate(-90 0 26)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_1002)'%3E%3Cpath d='M15.9005 13.0001C15.9005 13.1306 15.8796 13.2522 15.8379 13.3646C15.7962 13.4771 15.7247 13.5841 15.6234 13.6856L10.7546 18.5543C10.6046 18.7042 10.416 18.7809 10.1889 18.7846C9.9619 18.788 9.76988 18.7113 9.6128 18.5543C9.45589 18.3973 9.37744 18.207 9.37744 17.9834C9.37744 17.7599 9.45589 17.5696 9.6128 17.4125L14.0255 13.0001L9.6128 8.58768C9.46293 8.43764 9.3862 8.24905 9.38259 8.02191C9.37916 7.79496 9.45589 7.60293 9.6128 7.44585C9.76988 7.28895 9.96018 7.2105 10.1837 7.2105C10.4072 7.2105 10.5975 7.28895 10.7546 7.44585L15.6234 12.3146C15.7247 12.4161 15.7962 12.5231 15.8379 12.6356C15.8796 12.748 15.9005 12.8696 15.9005 13.0001Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .visual .ctrl_wrap .slide-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .visual .ctrl_wrap .progress-bar {
-  position: relative;
-  width: 1080px; /* 숫자+버튼 너비 제외한 나머지 프로그레스 바 넓이  ??????????????????????*/
-  height: 3px;
-  background: rgba(255,255,255,0.3);
-  border-radius: 2px;
-  overflow: hidden;
+    position: relative;
+    width: 1080px; /* 숫자+버튼 너비 제외한 나머지 프로그레스 바 넓이  ??????????????????????*/
+    height: 3px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    overflow: hidden;
 }
 .visual .ctrl_wrap .progress-bar .progress-fill {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0%; /* 현재 슬라이드 비율에 맞게 조절 */
-  background: #fff;
-  transition: width 5s linear;
-  border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%; /* 현재 슬라이드 비율에 맞게 조절 */
+    background: #fff;
+    transition: width 5s linear;
+    border-radius: 2px;
 }
 .visual .scroll {
     display: flex;
@@ -472,8 +472,8 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         display: none;
     }
     .visual .swiper .swiper-slide {
-      height: 545px;
-      border-radius: 25px;
+        height: 545px;
+        border-radius: 25px;
     }
     .visual .swiper-slide .txt_wrap {
         margin: 138px 20px 0 20px;
@@ -591,9 +591,9 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     margin: 73px 0 139px 0;
 }
 .product .list ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
 }
 .product .list ul li {
     width: calc(33.33% - 16px);
@@ -623,6 +623,7 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 .product .list ul li a:hover::before {
     background-color: var(--main-color);
     border-radius: 50%;
+    
 }
 
 /* 텍스트 색상 반전 */
@@ -632,11 +633,11 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 }
 
 .product .list ul li a h3 {
-  font-size: 35px;
-  font-weight: 700;
-  color: var(--tit-color);
-  margin: 144px 0 34px 0;
-  transition: 0.3s;
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--tit-color);
+    margin: 144px 0 34px 0;
+    transition: 0.3s;
 }
 .product .list ul li a p {
     margin: 0 0 57px 0;
@@ -980,6 +981,159 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     }
     .esg .list ul li a h3 {
         font-size: 22px;
+    }
+}
+.grobal {
+    background: url(../images/grobal_map.jpg) no-repeat center bottom / cover;
+    min-height: 817px;
+    margin: 157px 0 92px 0;
+}
+.grobal .tit {
+    text-align: center;
+}
+.grobal .tit p {
+    font-size: 75px;
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+}
+.grobal .tit p span {
+    color: var(--main-color);
+}
+
+
+.news {
+    background-color: #F9FAFB;
+    padding: 116px 0 129px 0;
+}
+.news .wrapper {
+    position: relative;
+}
+.news .tit h2 {
+    color: var(--main-color);
+    line-height: 1.2;
+}
+.news .tit p {
+    font-size: 60px;
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+    margin: 12px 0 62px 0;
+}
+.news .list ul {
+    border-top: 1px solid #ddd;
+}
+.news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    height: 106px;
+    padding: 0 30px;
+    font-family: "Pretendard", sans-serif;
+}
+.news .list ul li a .subject {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 132px);
+}
+.news .list ul li a .subject strong {
+    display: block;
+    color: var(--point-color);
+}
+.news .list ul li a .subject h3  {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2d2d2d;
+    line-height: 1.2;
+    width: calc(100% - 115px);
+    /* 1줄 제한 */
+    white-space: nowrap;     
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news .list ul li a .date {
+    color: #999;
+    text-align: right;
+    width: 132px;  /* 글자넓이 + 제목과의 여백 */
+}
+.news .more {
+    position: absolute; /* wrapper 를 기준으로 정렬 */
+    right: 0;
+    top: 76px;
+    color: var(--tit-color);
+    font-size: 16px;
+    padding: 0 35px 0 0;
+}
+.news .more::after {
+    content: "";
+    position: absolute; /*more를 기준으로 정렬*/
+    background-color: var(--point-color);
+    border-radius: 50%;
+    right: 14px;
+    top: 5px;
+    width: 14px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.42857 4.57143H0.571429C0.409524 4.57143 0.27381 4.51667 0.164286 4.40714C0.0547619 4.29762 0 4.1619 0 4C0 3.8381 0.0547619 3.70238 0.164286 3.59286C0.27381 3.48333 0.409524 3.42857 0.571429 3.42857H3.42857V0.571429C3.42857 0.409524 3.48333 0.27381 3.59286 0.164286C3.70238 0.0547619 3.8381 0 4 0C4.1619 0 4.29762 0.0547619 4.40714 0.164286C4.51667 0.27381 4.57143 0.409524 4.57143 0.571429V3.42857H7.42857C7.59048 3.42857 7.72619 3.48333 7.83572 3.59286C7.94524 3.70238 8 3.8381 8 4C8 4.1619 7.94524 4.29762 7.83572 4.40714C7.72619 4.51667 7.59048 4.57143 7.42857 4.57143H4.57143V7.42857C4.57143 7.59048 4.51667 7.72619 4.40714 7.83572C4.29762 7.94524 4.1619 8 4 8C3.8381 8 3.70238 7.94524 3.59286 7.83572C3.48333 7.72619 3.42857 7.59048 3.42857 7.42857V4.57143Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.news .list ul li a:hover .subject h3 {
+    font-weight: 700;
+    text-decoration: underline;
+}
+@media screen and (max-width:1024px){
+    .news .tit p {
+        font-size: 45px;
+    }
+}
+@media screen and (max-width:768px){
+    .news {
+        background-color: #F9FAFB;
+        padding: 72px 0 88px 0;
+    }
+    .news .tit h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--tit-color);
+        line-height: 1.5;
+    }
+    .news .tit p {
+        display: none;
+    }
+    .news .list {
+        margin: 40px 0 0 0;
+    }
+    .news .list ul li a {
+        height: 59px;
+        padding: 0 20px;
+    }
+    .news .list ul li a .subject {
+        width: 100%;
+    }
+    .news .list ul li a .subject strong {
+        font-size: 15px;
+    }
+    .news .list ul li a .subject h3  {
+        font-size: 16px;
+    }
+    .news .list ul li a .date {
+        display: none;
+    }
+    .news .more {
+        right: 0;
+        top: 20px;
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.85714 9.14286H1.14286C0.819048 9.14286 0.547619 9.03333 0.328571 8.81429C0.109524 8.59524 0 8.32381 0 8C0 7.67619 0.109524 7.40476 0.328571 7.18571C0.547619 6.96667 0.819048 6.85714 1.14286 6.85714H6.85714V1.14286C6.85714 0.819048 6.96667 0.547619 7.18571 0.328571C7.40476 0.109524 7.67619 0 8 0C8.32381 0 8.59524 0.109524 8.81429 0.328571C9.03333 0.547619 9.14286 0.819048 9.14286 1.14286V6.85714H14.8571C15.181 6.85714 15.4524 6.96667 15.6714 7.18571C15.8905 7.40476 16 7.67619 16 8C16 8.32381 15.8905 8.59524 15.6714 8.81429C15.4524 9.03333 15.181 9.14286 14.8571 9.14286H9.14286V14.8571C9.14286 15.181 9.03333 15.4524 8.81429 15.6714C8.59524 15.8905 8.32381 16 8 16C7.67619 16 7.40476 15.8905 7.18571 15.6714C6.96667 15.4524 6.85714 15.181 6.85714 14.8571V9.14286Z' fill='%23002F87'/%3E%3C/svg%3E%0A");
+        padding: 0;
+    }
+    .news .more span {
+        display: none;
+    }
+    .news .more::after {
+        display: none;
     }
 }
 footer {
