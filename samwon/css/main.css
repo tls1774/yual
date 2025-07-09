@@ -7,7 +7,7 @@ header {
     position: fixed; /* body를 기준으로 정렬 */
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 101;
     width: 100%;
     height: var(--header-h);
     padding: 0 60px;
@@ -179,6 +179,9 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     pointer-events: auto;
 }
 @media screen and (min-width:1025px) and (max-width:1300px) {
+    header {
+        padding: 0 0 0 30px;
+    }
     header .gnb .gnb_wrap ul.depth1 > li {
         width: 118px;
     }
@@ -188,9 +191,8 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 }
 @media screen and (max-width:1024px) {
     header {
-        height: var(--header-h);
         padding: 0 0 0 30px;
-    }
+    }   
     header .logo {
         margin-top: 10px;
     }
@@ -276,6 +278,11 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a:hover {
         font-weight: var(--bold-weight);
         color: var(--main-color);
+    }
+}
+@media screen and (max-width:768px) {
+    header {
+        padding: 0 0 0 20px;
     }
 }
 
@@ -396,6 +403,15 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     background: #fff;
     transition: width 5s linear;
     border-radius: 2px;
+
+    animation-name: fill;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes fill { 
+	0% { width: 0;}  
+	100% { width: 100%; } 
 }
 .visual .scroll {
     display: flex;
@@ -445,9 +461,14 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     transform: translateX(6px); /* 오른쪽으로 이동 */
   }
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:1300px){
     .visual {
         margin: 0 30px;
+    }
+}
+@media screen and (max-width:1024px){
+    .visual {
+        margin: 0 20px;
     }
     .visual h2 {    
         margin: 105px 0 20px 0;
@@ -534,9 +555,6 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         display: none;
     }
 }
-
-
-
 /******************************** product ******************************/
 .product {
     margin: 161px 0 0 0;
@@ -561,7 +579,6 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 .product .tit .inner p {
     margin: 5px 0 0 0;
 }
-
 .product .more { 
     position: absolute;
     right: 0;
@@ -584,6 +601,9 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.42857 4.57143H0.571429C0.409524 4.57143 0.27381 4.51667 0.164286 4.40714C0.0547619 4.29762 0 4.1619 0 4C0 3.8381 0.0547619 3.70238 0.164286 3.59286C0.27381 3.48333 0.409524 3.42857 0.571429 3.42857H3.42857V0.571429C3.42857 0.409524 3.48333 0.27381 3.59286 0.164286C3.70238 0.0547619 3.8381 0 4 0C4.1619 0 4.29762 0.0547619 4.40714 0.164286C4.51667 0.27381 4.57143 0.409524 4.57143 0.571429V3.42857H7.42857C7.59048 3.42857 7.72619 3.48333 7.83572 3.59286C7.94524 3.70238 8 3.8381 8 4C8 4.1619 7.94524 4.29762 7.83572 4.40714C7.72619 4.51667 7.59048 4.57143 7.42857 4.57143H4.57143V7.42857C4.57143 7.59048 4.51667 7.72619 4.40714 7.83572C4.29762 7.94524 4.1619 8 4 8C3.8381 8 3.70238 7.94524 3.59286 7.83572C3.48333 7.72619 3.42857 7.59048 3.42857 7.42857V4.57143Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.product .more:hover { 
+    font-weight: 700;
 }
 
 /* 리스트 */
@@ -631,7 +651,6 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 .product .list ul li a:hover p {
     color: #fff;
 }
-
 .product .list ul li a h3 {
     font-size: 35px;
     font-weight: 700;
@@ -647,7 +666,6 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     line-height: 1.5;
     height: 3em;
 }
-
 /* 이미지 */
 .product .list  ul li a .photo {
     width: 190px;
@@ -676,12 +694,11 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         display: block;
     }
     .product .tit .inner h2 {
-        font-size: 35px;
+        font-size: 30px;
     }
     .product .tit .inner p {
         display: none;
     }
-    
     .product .more { 
         width: 16px;
         height: 16px;
@@ -716,7 +733,7 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     }
     
     .product .list ul li a h3 {
-      font-size: 25px;
+      font-size: 22px;
       margin: 23px 0 3px 0;
     }
     .product .list ul li a p {
@@ -759,6 +776,9 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     padding: 0 33px 0 0 ;
     position: relative;
     font-family: "Pretendard", sans-serif;
+}
+.esg .tit .more:hover {
+    font-weight: 700;
 }
 .esg .tit .more::after {
     content: "";
@@ -983,27 +1003,285 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         font-size: 22px;
     }
 }
+/******************* grobal *******************/
 .grobal {
-    background: url(../images/grobal_map.jpg) no-repeat center bottom / cover;
-    min-height: 817px;
-    margin: 157px 0 92px 0;
+    padding: 157px 0 87px 0;
 }
 .grobal .tit {
     text-align: center;
 }
-.grobal .tit p {
+.grobal .tit h2 {
     font-size: 75px;
     font-weight: var(--bold-weight);
     color: var(--tit-color);
+    margin: 0 0 28px 0;
 }
-.grobal .tit p span {
+.grobal .tit h2 span {
     color: var(--main-color);
 }
+.grobal .map_wrap {
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin: 0 20px;
+}
+.grobal .map {
+    position: relative;
+    max-width: 1664px;
+    min-width: 952px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+.grobal .map img {
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+.grobal .map .item {
+    position: absolute;
+    display: block;
+}
+.grobal .map .item .point {
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid var(--point-color);
+    width: 8px;
+    height: 8px;
+}
+.grobal .map .item.korea .point {
+    border: 2px solid var(--main-color);
+}
+.grobal .map .item .point .circle {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+}
+.grobal .map .item .point .circle::before,
+.grobal .map .item .point .circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 47, 135, 0.3);
+    border-radius: 50%;
+    
+    animation-name: animate_big; 
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    
+}
+.grobal .map .item.korea .point .circle::before,
+.grobal .map .item.korea .point .circle::after {
+    background-color: rgba(0, 130, 64, 0.3);
+}
+.grobal .map .item .point .circle::after {
+    width: 22px;
+    height: 22px;
 
+    animation-name: animate_big2; 
+}
+@keyframes animate_big {
+    0% { width: 50px; height: 50px;}
+    50% { width: 70px; height: 70px; } 
+    100% { width: 50px; height: 50px;}
+}
+@keyframes animate_big2 {
+    0% { width: 22px; height: 22px;}
+    50% { width: 35px; height: 35px; } 
+    100% { width: 22px; height: 22px;}
+}
+.grobal .map .item .con_txt {
+    display: block;
+    position: relative;
+    font-weight: 500;
+}
+.grobal .map .item .con_txt:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+/* russia */
+.grobal .map .item.russia {
+    left: 23%;
+    top: 18%;
+} 
+.grobal .map .item.russia .con_txt {
+    left: 4%;
+    bottom: 18px;
+    padding: 0 0 0 118px;
+    background: url(../images/russia_line.png) no-repeat left bottom 45%;
+}
 
+/* poland */
+.grobal .map .item.poland {
+    left: 15%;
+    top: 25%;
+} 
+.grobal .map .item.poland .con_txt {
+    left: 3%;
+    bottom: 6px;
+    padding: 40px 0 0 138px;
+    background: url(../images/poland_line.png) no-repeat left bottom 78%;
+}
+
+/* germany */
+.grobal .map .item.germany {
+    left: 8%;
+    top: 32%;
+} 
+.grobal .map .item.germany .con_txt {
+    left: 2%;
+    bottom: 9px;
+    padding: 50px 0 0 121px;
+    background: url(../images/germany_line.png) no-repeat left bottom 61%;
+}
+
+/* india */
+.grobal .map .item.india {
+    left: 26%;
+    top: 49%;
+} 
+.grobal .map .item.india .con_txt {
+    right: 96%;
+    bottom: 24px;
+    padding: 71px 74px 0 0;
+    background: url(../images/india_line.png) no-repeat right bottom 31%;
+}
+/* korea */
+.grobal .map .item.korea {
+    left: 39%;
+    top: 37%;
+} 
+.grobal .map .item.korea .con_txt {
+    left: 3%;
+    bottom: 19px;
+    padding: 0 0 0 134px;
+    background: url(../images/korea_line.png) no-repeat left bottom 42%;
+}
+/* china */
+.grobal .map .item.china {
+    left: 34%;
+    top: 43%;
+} 
+.grobal .map .item.china .con_txt {
+    left: 2%;
+    bottom: 5px;
+    padding: 48px 0 0 183px;
+    background: url(../images/china_line.png) no-repeat left bottom 81%;
+}
+/* america */
+.grobal .map .item.america {
+    left: 74%;
+    top: 42%;
+} 
+.grobal .map .item.america .con_txt {
+    right: 99%;
+    bottom: 49px;
+    padding: 64px 133px 0 0;
+    background: url(../images/america_line.png) no-repeat right bottom 20%;
+}
+@media screen and (max-width:1024px){
+    .grobal {
+        padding: 116px 0 76px 0;
+    }
+    .grobal .tit h2 {
+        font-size: 50px;
+        margin: 0 0 22px 0;
+    }
+    .grobal .map .item .point .circle::before {
+        width: 45px;
+        height: 45px;
+    }
+    .grobal .map .item .con_txt {
+        font-size: 16px;
+    }
+    /* germany */
+    .grobal .map .item.germany {
+        left: 7%;
+        top: 30%;
+    } 
+    @keyframes animate_big {
+        0% { width: 45px; height: 45px;}
+        50% { width: 60px; height: 60px; } 
+        100% { width: 45px; height: 45px;}
+    }
+    @keyframes animate_big2 {
+        0% { width: 22px; height: 22px;}
+        50% { width: 32px; height: 32px; } 
+        100% { width: 22px; height: 22px;}
+    }
+}
+@media screen and (max-width:768px){
+    .grobal {
+        padding: 64px 0 55px 0;
+    }
+    .grobal .tit h2 {
+        font-size: 35px;
+        margin: 0 0 23px 0;
+    }
+    .grobal .tit p {
+        display: none;
+    }
+    .grobal .map .item .point .circle::before,
+    .grobal .map .item .point .circle::after {
+        width: 35px;
+        height: 35px;
+    }
+    .grobal .map .item .point .circle::after {
+        width: 18px;
+        height: 18px;
+    }
+    .grobal .map .item .con_txt {
+        font-size: 14px;
+    }
+     /* russia */
+    .grobal .map .item.russia .con_txt {
+        bottom: 16px;
+    }
+    /* germany */
+    .grobal .map .item.germany {
+        top: 31%;
+    } 
+    .grobal .map .item.germany .con_txt {
+        left: 3%;
+        bottom: 8px;
+    }
+    /* india */
+    .grobal .map .item.india .con_txt {
+        bottom: 22px;
+    }
+    /* korea */
+    .grobal .map .item.korea .con_txt {
+        bottom: 16px;
+    }
+    /* china */
+    .grobal .map .item.china .con_txt {
+        left: 3%;
+    }
+    /* america */
+    .grobal .map .item.america .con_txt {
+        bottom: 47px;
+    }
+    @keyframes animate_big {
+        0% { width: 35px; height: 35px;}
+        50% { width: 45px; height: 45px; } 
+        100% { width: 35px; height: 35px;}
+    }
+    @keyframes animate_big2 {
+        0% { width: 18px; height: 18px;}
+        50% { width: 25px; height: 25px; } 
+        100% { width: 18px; height: 18px;}
+    }
+}
+
+/******************* news ********************/
 .news {
     background-color: #F9FAFB;
-    padding: 116px 0 129px 0;
+    padding: 157px 0 89px 0;
 }
 .news .wrapper {
     position: relative;
@@ -1063,6 +1341,7 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     color: var(--tit-color);
     font-size: 16px;
     padding: 0 35px 0 0;
+    font-family: "Pretendard", sans-serif;
 }
 .news .more::after {
     content: "";
@@ -1077,6 +1356,9 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     background-repeat: no-repeat;
     background-position: center center;
 }
+.news .more:hover {
+    font-weight: 700;
+}
 .news .list ul li a:hover .subject h3 {
     font-weight: 700;
     text-decoration: underline;
@@ -1089,7 +1371,7 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
 @media screen and (max-width:768px){
     .news {
         background-color: #F9FAFB;
-        padding: 72px 0 88px 0;
+        padding: 72px 0 72px 0;
     }
     .news .tit h2 {
         font-size: 30px;
@@ -1137,5 +1419,204 @@ header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     }
 }
 footer {
-    margin: 500px 0 0 0;
+    background-color: #F9FAFB;
+    padding: 60px 0 60px 0;
+}
+footer .box {
+    margin: 0 60px;
+    background-color: #00163F;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    padding: 77px 0 0 0;
+}
+footer .box .top {
+    position: absolute;
+    background-color: #9D9D9D;
+    border-radius: 10px;
+    width: 46px;
+    height: 46px;
+    top: -70px;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_1166' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect y='24' width='24' height='24' transform='rotate(-90 0 24)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_1166)'%3E%3Cpath d='M12.9995 7.85L12.9995 19C12.9995 19.2833 12.9037 19.5208 12.712 19.7125C12.5204 19.9042 12.2829 20 11.9995 20C11.7162 20 11.4787 19.9042 11.287 19.7125C11.0954 19.5208 10.9995 19.2833 10.9995 19L10.9995 7.85L8.14952 10.7C7.94952 10.9 7.71619 10.9958 7.44952 10.9875C7.18286 10.9792 6.94952 10.8833 6.74952 10.7C6.54952 10.5 6.44536 10.2625 6.43702 9.9875C6.42869 9.7125 6.52452 9.475 6.72452 9.275L11.2995 4.7C11.3995 4.6 11.5079 4.52917 11.6245 4.4875C11.7412 4.44583 11.8662 4.425 11.9995 4.425C12.1329 4.425 12.2579 4.44583 12.3745 4.4875C12.4912 4.52917 12.5995 4.6 12.6995 4.7L17.2745 9.275C17.4745 9.475 17.5704 9.7125 17.562 9.9875C17.5537 10.2625 17.4495 10.5 17.2495 10.7C17.0495 10.8833 16.8162 10.9792 16.5495 10.9875C16.2829 10.9958 16.0495 10.9 15.8495 10.7L12.9995 7.85Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .group_wrap {
+    display: flex;
+    justify-content: space-between;
+    margin:  0 auto;
+    max-width: 1260px;
+}
+
+@media screen and (max-width:1330px) {
+    footer {
+        padding: 30px 0;
+    }
+    footer .box {
+        margin: 0 30px;
+    }
+}
+@media screen and (max-width:1420px) {
+    footer .group_wrap {
+        margin: 0 20px;
+    }
+}
+
+footer .group2 .f_nav ul {
+    display: flex;
+    gap: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 32px 0 48px 0;
+}
+footer .group2 .f_nav ul li:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+footer .group2 .f_nav ul .line {
+    position: relative;
+}
+footer .group2 .f_nav ul .line::after {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 1px;
+    top: 7px;
+    right: -21px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+footer .group2 .f_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .group2 .f_info .line {
+    position: relative;
+}
+footer .group2 .f_info .line::after {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 1px;
+    top: 7px;
+    right: -20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+footer .group2 .copyright {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 30px 0 95px 0;
+}
+footer .family_site {
+    margin: 77px 0 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    position: relative;
+    white-space: nowrap;
+    width: 226px;
+}
+footer .family_site .family_open {
+    border: 1px solid #fff;
+    padding: 12px 99px 12px 29px;
+    position: relative;
+    width: 100%;
+}
+footer .family_site .family_open::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_1169' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='36' height='36'%3E%3Cpath d='M0 0H36V36H0V0Z' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_1169)'%3E%3Cpath d='M17.2123 21.7125L11.7748 16.275C11.6998 16.2 11.6436 16.1188 11.6061 16.0313C11.5686 15.9438 11.5498 15.85 11.5498 15.75C11.5498 15.55 11.6186 15.375 11.7561 15.225C11.8936 15.075 12.0748 15 12.2998 15H23.6998C23.9248 15 24.1061 15.075 24.2436 15.225C24.3811 15.375 24.4498 15.55 24.4498 15.75C24.4498 15.8 24.3748 15.975 24.2248 16.275L18.7873 21.7125C18.6623 21.8375 18.5373 21.925 18.4123 21.975C18.2873 22.025 18.1498 22.05 17.9998 22.05C17.8498 22.05 17.7123 22.025 17.5873 21.975C17.4623 21.925 17.3373 21.8375 17.2123 21.7125Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .family_site ul {
+    border: 1px solid #FFF;
+    background-color: #00163F;
+    padding: 12px 0 12px 29px;
+    position: absolute;
+    right: 0;
+    top: -205px;
+    width: 100%;
+
+    display: block;
+}
+footer .family_site ul li {
+    margin-bottom: 15px;
+}
+footer .family_site ul li:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+footer .family_site ul li:last-child {
+    margin-bottom: 0;
+}
+@media screen and (max-width:1024px){
+    footer {
+        padding: 20px 0 0 0;
+    }
+    footer .box {
+        margin: 20px;   
+    }
+}
+@media screen and (max-width:768px){
+    footer {
+        background-color: #F9FAFB;
+        padding: 30px 0 0 0;
+    }
+    footer .box {
+        margin: 20px;
+        padding: 35px 0 63px 0;
+    }
+    footer .box .top {
+        border-radius: 5px;
+        width: 32px;
+        height: 32px;
+        top: -50px;
+    }
+    footer .box .group1 .f_logo img {
+        width: 154px;
+        height: 29px;
+    }
+    footer .group_wrap {
+        flex-direction: column;   /* 세로로 쌓기 */
+        text-align: center; 
+        align-items: center;
+    }
+    footer .group2 .f_nav ul {
+        gap: 2px 23px;
+        margin: 27px 0 36px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer .group2 .f_nav ul .line::after {
+        right: -13px;
+    }
+    footer .group2 .f_info {
+        gap: 2px 25px;
+        justify-content: center;
+    }
+    footer .group2 .f_info span::before {   
+        left: -12px;
+    }
+    footer .group2 .copyright {
+        font-size: 15px;
+        margin: 30px 0 0 0;
+    }
+    footer .family_site {
+        margin: 28px 0 0 0;
+        width: 160px;
+    }
+    footer .family_site .family_open {
+        padding: 10px 57px 10px 16px;
+    }
+    footer .family_site ul {
+        padding: 12px 65px 12px 0;
+        right: 0;
+        top: -205px;
+        display: block;
+    }
 }

@@ -94,5 +94,5 @@ html, body {
 }
 ::selection {
     color: #fff;
-    background-color: #677333;
+    background-color: var(--main-color);
 }
