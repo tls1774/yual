@@ -249,11 +249,12 @@ header.menu_over  {
     header .gnb .gnb_util .lang .lang_open {
         position: relative;
         padding-right: 15px;
+        color: var(--point-color);
     }
     header .gnb .gnb_util .lang .lang_open::after {
         content: "";
         position: absolute;
-        top: 8px;
+        top: 6px;
         right: 0;
         width: 15px;
         height: 15px;
