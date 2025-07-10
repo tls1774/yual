@@ -19,6 +19,22 @@ $(document).ready(function(){
         prevEl: '.visual .ctrl_wrap button.btn_prev',
         },
     });
+    /*********************  lang_open ****************** */
+        $('.lang_open').click(function(e){
+          e.stopPropagation();
+          $('.box').toggleClass('active'); // hide 대신 active 토글
+        });
+      
+        $('.box .item').click(function(e){
+          e.preventDefault();
+          var selected = $(this).text();
+          $('.lang_open span').text(selected);
+          $('.box').removeClass('active');
+        });
+      
+        $(document).click(function(){
+          $('.box').removeClass('active');
+        });
 
     /*************** family site 열고닫기 ****************/
 
@@ -34,4 +50,6 @@ $(document).ready(function(){
             $('.family_close').addClass('hide');
             $('.family_open').removeClass('hide');
         });
+
+
 });

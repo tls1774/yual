@@ -15,7 +15,6 @@ header {
     justify-content: space-between;
     align-items: center;
     color: #1d1d1d;
-   
     transition: top 0.5s;
 }
 header .logo a {
@@ -24,7 +23,6 @@ header .logo a {
     height: 45px;
     background: url(../images/logo.svg) no-repeat center center / contain;
 }
-
 /*************** 아래로 스크롤 내릴때 header가 사라짐 ***********************/
 header.fixed.gnb_up {
     top: var(--header-h-m);
@@ -42,6 +40,10 @@ header.menu_over  {
     header .util {
         display: flex;
         gap: 10px;
+    }
+    header .util .lang {
+        position: relative;
+        color: var(--point-color);
     }
     header .util .lang .lang_open {
         padding: 0 15px 0 22px;
@@ -82,7 +84,37 @@ header.menu_over  {
     header .util .lang .lang_open:hover {
         text-decoration: underline;
     }
-    
+    header .util .lang .box {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--point-color);
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 4px;
+        z-index: 1000;
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    header .util .lang .box.active {
+        max-height: 200px; /* 내용 높이에 맞게 조절 */
+        opacity: 1;
+        pointer-events: auto;
+    }
+    header .util .lang .box .item {
+        display: block;
+        color: #fff;
+        font-size: 15px;
+        padding: 6px 0;
+        text-align: center;
+    }
+    header .util .lang .box .item:hover {
+        text-decoration: underline;
+    }
     header .gnb .gnb_util,
     header .gnb .gnb_open,
     header .gnb .gnb_close {
@@ -208,12 +240,11 @@ header.menu_over  {
     header .util {
         display: none;  /* 모바일에선 안보임 */
     }
-    header .gnb .gnb_util,
-    header .gnb .gnb_open{
-        display: block; /* 나타남 */
-    }
     header .gnb .gnb_util {
-        display: block;
+        display: block; /* 모바일에서만 보임 나타남 */
+        position: absolute;
+        top: 17px;
+        right: 60px;
     }
     header .gnb .gnb_util .lang .lang_open {
         position: relative;
@@ -244,20 +275,21 @@ header.menu_over  {
         background-image: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_42_753' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='29' height='29'%3E%3Crect width='29' height='29' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_42_753)'%3E%3Cpath d='M14.5 16.1916L8.57913 22.1125C8.35761 22.334 8.07566 22.4448 7.7333 22.4448C7.39094 22.4448 7.109 22.334 6.88747 22.1125C6.66594 21.8909 6.55518 21.609 6.55518 21.2666C6.55518 20.9243 6.66594 20.6423 6.88747 20.4208L12.8083 14.5L6.88747 8.57913C6.66594 8.35761 6.55518 8.07566 6.55518 7.7333C6.55518 7.39094 6.66594 7.109 6.88747 6.88747C7.109 6.66594 7.39094 6.55518 7.7333 6.55518C8.07566 6.55518 8.35761 6.66594 8.57913 6.88747L14.5 12.8083L20.4208 6.88747C20.6423 6.66594 20.9243 6.55518 21.2666 6.55518C21.609 6.55518 21.8909 6.66594 22.1125 6.88747C22.334 7.109 22.4448 7.39094 22.4448 7.7333C22.4448 8.07566 22.334 8.35761 22.1125 8.57913L16.1916 14.5L22.1125 20.4208C22.334 20.6423 22.4448 20.9243 22.4448 21.2666C22.4448 21.609 22.334 21.8909 22.1125 22.1125C21.8909 22.334 21.609 22.4448 21.2666 22.4448C20.9243 22.4448 20.6423 22.334 20.4208 22.1125L14.5 16.1916Z' fill='%23002F87'/%3E%3C/g%3E%3C/svg%3E%0A");
     } 
     header .gnb .gnb_wrap {
-        display: none;  /****** 모바일 클릭메뉴 숨겨놓기 *****/
-
         position: fixed; /* body를 기준으로 정렬 */
-        left: 0;
+        right: -100%;
         top: 0;
         width: 100%;
         height: 100%;
         background-color: #fff;
         color: #1d1d1d;
+
+        transition: 0.6s;
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin: 60px 20px 0 20px;
         height: calc(100% - 60px);
         overflow-y: auto;
+        overflow-x: hidden;
     }
     header .gnb .gnb_wrap ul.depth1 > li {
         border-bottom: 1px solid #ededed;
@@ -284,8 +316,11 @@ header.menu_over  {
         background-repeat: no-repeat;
     }
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+        background-color: #F9FAFB;
+        border-radius: 5px;
+        margin: 0 0 25px 0;
         color: #555;
-        padding: 22px 0 24px 0;
+        padding: 24px 20px;
         display: none; /* 숨김 */
         font-family: "pretendard", sans-serif;
     }
@@ -311,7 +346,8 @@ header.menu_over  {
     
     /******** 모바일 메뉴가 열렸을때 **********/
     header.menu_open .gnb .gnb_wrap {
-        display: block; /* 나타남 */
+        
+        right: 0; /* 나타남 */
     }
     header.menu_open .gnb .gnb_close {
         display: block; /* 나타남 */
