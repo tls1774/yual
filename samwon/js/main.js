@@ -2,9 +2,10 @@ $(document).ready(function(){
 
     AOS.init({
         offset: 150,
-        duration: 500,
+        duration: 1000,
         easing: 'ease',
     });
+    
 
     const visual_swiper = new Swiper('.visual .swiper', {
         autoplay: {  
@@ -19,4 +20,18 @@ $(document).ready(function(){
         },
     });
 
+    /*************** family site 열고닫기 ****************/
+
+        $('.family_site .family_open').on('click', function () {
+            // console.log('!!!!!!!!!!')
+            $('.family_site ul').addClass('on');
+            $('.family_open').addClass('hide');
+            $('.family_close').removeClass('hide');
+        });
+    
+        $('.family_site .family_close').on('click', function () {
+            $('.family_site ul').removeClass('on');
+            $('.family_close').addClass('hide');
+            $('.family_open').removeClass('hide');
+        });
 });
