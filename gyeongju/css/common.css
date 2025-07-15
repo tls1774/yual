@@ -65,11 +65,11 @@ html, body {
 
 /* css  변수 */
 :root {
-    --header-h: 100px; /* header 높이 */
-    --header-h-m: -100px; /* header 높이 마이너스값 */
+    --header-h: 110px; /* header 높이 */
+    --header-h-m: -110px; /* header 높이 마이너스값 */
     --tit-color: #1d1d1d;
     --base-color: #555;
-    --main-color: #008240;
+    --main-color: #009B93;
     --point-color: #002F87;
     --bold-weight: 700;
     --tit-line-height: 1.2;

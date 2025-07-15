@@ -10,12 +10,12 @@ header {
     z-index: 101;
     width: 100%;
     height: var(--header-h);
-    padding: 0 60px;
     display: flex; /* logo, gnb, util 좌우 */
     justify-content: space-between;
     align-items: center;
     color: #1d1d1d;
     transition: top 0.5s;
+    padding: 0 60px;
 }
 header .logo a {
     display: block;
@@ -118,7 +118,7 @@ header.menu_over  {
     header .gnb .gnb_util,
     header .gnb .gnb_open,
     header .gnb .gnb_close {
-        display: none; /* 모바일에서만 숨김 */
+        display: none; /* 모바일에서만 보임 */
     }
     header .gnb .gnb_wrap ul.depth1 {
         display: flex;
