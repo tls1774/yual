@@ -20,6 +20,7 @@ $(document).ready(function(){
         },
     });
     /*********************  lang_open ****************** */
+    
         $('.lang_open').click(function(e){
           e.stopPropagation();
           $('.box').toggleClass('active'); // hide 대신 active 토글
