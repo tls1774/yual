@@ -530,7 +530,7 @@ header.menu_over  {
 
 .intro {
     background: #F7FFF4 url(../images/intro_icon01.png) no-repeat center bottom -30px;
-    padding: 222px 0 280px 0;
+    padding: 243px 0 280px 0;
     position: relative;
 }
 .intro::before {
@@ -569,6 +569,12 @@ header.menu_over  {
     position: relative;
     margin-left: 50px;
     margin-bottom: 20px;
+
+    transition: all 0.3s ease;
+}
+.intro .story01 a:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .intro .story01 a::after {
     content: "";
@@ -585,9 +591,11 @@ header.menu_over  {
     margin: 300px 0 0 0;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .intro .story02 .text {
     font-size: 50px;
+    color: #1d1d1d;
 }
 .intro .story02 .text h3 {
     font-weight: 700;
@@ -603,45 +611,153 @@ header.menu_over  {
     height: 260px;
     border-radius: 50px;
     text-align: center;
-} 
+    position: relative;
+    transition: all 0.3s ease;
+}
+.intro .story02 .list ul li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 .intro .story02 .list ul li.yellow {
-    background-color: #FFCC05;
+  background-color: #FFCC05;
 }
 .intro .story02 .list ul li.green {
-    background-color: #ABC937;
+  background-color: #ABC937;
 }
 .intro .story02 .list ul li a {
+  color: #fff;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  padding: 150px 0 40px; /* 아이콘+텍스트+플러스 정렬을 위한 여백 */
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.intro .story02 .list ul li a::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/intro_work01.png);
+}
+.intro .story02 .list ul li.green a::before {
+  background-image: url(../images/intro_work02.png);
+}
+.intro .story02 .list ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_95_2399' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='28' height='28'%3E%3Crect width='28' height='28' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_95_2399)'%3E%3Cpath d='M13.9994 23.9173C13.7513 23.9173 13.5435 23.8334 13.3761 23.6656C13.2085 23.498 13.1247 23.2902 13.1247 23.0423V14.8757H4.95801C4.71009 14.8757 4.50233 14.7917 4.33472 14.6239C4.16691 14.4561 4.08301 14.2483 4.08301 14.0004C4.08301 13.7522 4.16691 13.5445 4.33472 13.3771C4.50233 13.2095 4.71009 13.1257 4.95801 13.1257H13.1247V4.95898C13.1247 4.71107 13.2086 4.5033 13.3764 4.33569C13.5442 4.16789 13.7521 4.08398 14 4.08398C14.2481 4.08398 14.4558 4.16789 14.6233 4.33569C14.7909 4.5033 14.8747 4.71107 14.8747 4.95898V13.1257H23.0413C23.2893 13.1257 23.497 13.2096 23.6646 13.3774C23.8324 13.5452 23.9163 13.753 23.9163 14.0009C23.9163 14.2491 23.8324 14.4568 23.6646 14.6242C23.497 14.7918 23.2893 14.8757 23.0413 14.8757H14.8747V23.0423C14.8747 23.2902 14.7908 23.498 14.623 23.6656C14.4552 23.8334 14.2473 23.9173 13.9994 23.9173Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.intro .story01 img {
+    position: absolute;
+    top: 6%;
+    right: 22%;
+}
+.intro .story02 img {
+    position: absolute;
+    top: -54%;
+    left: -13%;
+} 
+@media screen and (max-width:1330px) {
+    .intro .story01 {
+        justify-content: space-between;
+    }
+    .intro .story02 {
+        margin: 300px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .intro .story02 .text {
+        font-size: 50px;
+    }
+    .intro .story02 .text h3 {
+        font-weight: 700;
+        color: #ABC937;
+        margin-left: 300px;
+    }
+    .intro .story02 .list ul {
+        display: flex;
+        gap: 24px;
+    }
+    .intro .story02 .list ul li {
+        width: 260px;
+        height: 260px;
+        border-radius: 50px;
+        text-align: center;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    .intro .story02 .list ul li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .intro .story02 .list ul li.yellow {
+    background-color: #FFCC05;
+    }
+    .intro .story02 .list ul li.green {
+    background-color: #ABC937;
+    }
+    .intro .story02 .list ul li a {
     color: #fff;
     display: block;
     font-size: 22px;
     font-weight: 700;
-    padding: 157px 0 70px 0;
+    text-align: center;
+    padding: 150px 0 40px; /* 아이콘+텍스트+플러스 정렬을 위한 여백 */
     position: relative;
-}
-.intro .story02 .list ul li a::before {
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    }
+    .intro .story02 .list ul li a::before {
     content: "";
     position: absolute;
-    top: 37px;
-    right: 0;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
     height: 100px;
-    margin: 0 80px;
     background-repeat: no-repeat;
     background-position: center center;
-    background: url(../images/intro_work01.png);
-}
-.intro .story02 .list ul li.green a::before {
-    background: url(../images/intro_work02.png);
-}
-.intro .story02 .list ul li a::after {
+    background-image: url(../images/intro_work01.png);
+    }
+    .intro .story02 .list ul li.green a::before {
+    background-image: url(../images/intro_work02.png);
+    }
+    .intro .story02 .list ul li a::after {
     content: "";
     position: absolute;
-    bottom: 28px;
-    right: 0;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 28px;
     height: 28px;
-    margin: 0 115px;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_95_2399' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='28' height='28'%3E%3Crect width='28' height='28' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_95_2399)'%3E%3Cpath d='M13.9994 23.9173C13.7513 23.9173 13.5435 23.8334 13.3761 23.6656C13.2085 23.498 13.1247 23.2902 13.1247 23.0423V14.8757H4.95801C4.71009 14.8757 4.50233 14.7917 4.33472 14.6239C4.16691 14.4561 4.08301 14.2483 4.08301 14.0004C4.08301 13.7522 4.16691 13.5445 4.33472 13.3771C4.50233 13.2095 4.71009 13.1257 4.95801 13.1257H13.1247V4.95898C13.1247 4.71107 13.2086 4.5033 13.3764 4.33569C13.5442 4.16789 13.7521 4.08398 14 4.08398C14.2481 4.08398 14.4558 4.16789 14.6233 4.33569C14.7909 4.5033 14.8747 4.71107 14.8747 4.95898V13.1257H23.0413C23.2893 13.1257 23.497 13.2096 23.6646 13.3774C23.8324 13.5452 23.9163 13.753 23.9163 14.0009C23.9163 14.2491 23.8324 14.4568 23.6646 14.6242C23.497 14.7918 23.2893 14.8757 23.0413 14.8757H14.8747V23.0423C14.8747 23.2902 14.7908 23.498 14.623 23.6656C14.4552 23.8334 14.2473 23.9173 13.9994 23.9173Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    .intro .story01 img {
+        right:38%;
+    }
+    .intro .story02 img {
+        position: absolute;
+        top: -54%;
+        left: -13%;
+    } 
 }
