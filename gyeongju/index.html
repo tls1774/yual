@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--jquery 라이브러리-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- aos 애니메이션 라이브러리-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
-    <title>gyeongju</title>
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon"> 
+    <title>경주시 어린이시청</title>
 </head>
 <body>
     <div id="wrap">
-        <header>
+        <header class="">
             <div class="header_top">
-                <div class="gnb">
+                <div class="util">
                     <div class="site">
                         <button class="site_open"><span>경주시청</span></button>
                     </div>
@@ -23,7 +32,7 @@
             <div class="header_body">
                 <h1 class="logo"><a href="index.html"><span class="blind">gyeongjuchild</span></a></h1>
                 <nav class="gnb">
-                    <button class="gnb_open"><span class=>메뉴열기</span></button>
+                    <button class="gnb_open"><span class="blind">메뉴열기</span></button>
                     <div class="gnb_wrap">
                         <ul class="depth1">
                             <li>
@@ -60,7 +69,7 @@
                                 </ul> 
                             </li>
                         </ul>
-                        <button class="gnb_close"><span class=>메뉴닫기</span></button>
+                        <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
                     </div>
                 </nav>
                 <div class="util">
@@ -75,17 +84,51 @@
                 <h2>“어서 와요! 경주 어린이 시청이에요!”</h2>
                 <p>오늘은 맑아요! 밖에서 놀아도 좋아요</p>
                 <div class="box">
-                    <div class="tem"></div>
-                    <div class="dust"></div>
-                    <div class="ozone">
-                        <span>오존 보통</span>
-                        <span>(0.058 ppm)</span>
+                    <div class="tem">
+                        <strong><span class="whe">맑음</span>27.0℃</strong>
                     </div>
+                    <div class="dust">
+                        <strong>미세먼지 좋음</strong>
+                        <span class="num">(30㎍/㎥)</span>
+                    </div>
+                    <div class="ozone">
+                        <strong>오존 보통</strong>
+                        <span class="num">(0.058 ppm)</span>
+                    </div>
+                </div><!--//box-->
+                <img class="item01" src="images/item01.png" alt="종이비행기01">
+                <img class="item02" src="images/item02.png" alt="풍선든아이">
+                <img class="item03" src="images/item03.png" alt="종이비행기02">
+                <img class="item04" src="images/item04.png" alt="남자아이">
+                <img class="item05" src="images/item05.png" alt="로켓탄아이들">
+            </section><!--//visual-->
+            
+            <section class="intro">
+                <div class="wrapper">
+                    <div class="story01">
+                        <div class="text">
+                            <p>생각보다 훨씬 재미있는</p>
+                            <h3>경주 이야기</h3>
+                        </div>
+                        <a href="#" class="more">이야기보러가기</a>
+                        <img src="images/intro_people.png" alt="경주캐릭터">
+                    </div>
+                    <div class="story02">
+                        <div class="text">
+                            <p>시청은 무슨 일을 할까요?</p>
+                            <h3>시청 둘러보기</h3>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li class="yellow"><a href="#">시청에서 하는 일</a></li>
+                                <li class="green"><a href="#">의회에서 하는 일</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="images/intro_talk.png" alt="말풍선아이콘">
                 </div>
             </section>
-            <section class=""></section>
-            <section class=""></section>
-            <section class=""></section>
+            <section class="culture"></section>
             <section class="write"></section>
             <section class="play"></section>
         </main>
