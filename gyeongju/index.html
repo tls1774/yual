@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--jquery 라이브러리-->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <!--swiper 라이브러리-->
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
     <!-- aos 애니메이션 라이브러리-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
-    <script src="js/common.js"></script>
 
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon"> 
     <title>경주시 어린이시청</title>
@@ -128,10 +131,113 @@
                     </div>
                 </div>
             </section>
-            <section class="culture"></section>
-            <section class="write"></section>
-            <section class="play"></section>
+            <section class="culture">
+                <div class="tit">
+                    <h2>경주엔 어떤 <span>보물</span>이 있을까?</h2>
+                </div>
+                <div class="tab_list">
+                    <ul>
+                        <li class="item1"><button>문화유산</button></li>
+                        <li class="item2"><button>관광지</button></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/cul06.jpg" alt="석탑"></div>
+                                    <h3>천룡사지삼층석탑</h3>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/cul07.jpg" alt="복장전적"></div>
+                                    <h3>기림사비로차나불 복장전적</h3>
+                                </a>
+                            </li>  
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/cul08.jpg" alt="토우장식"></div>
+                                    <h3>토우장식장경호</h3>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/cul09.jpg" alt="불상"></div>
+                                    <h3>기림사소조비로자나삼존불상</h3>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/cul010.jpg" alt="금관"></div>
+                                    <h3>금관 및 수하식(황남대총 북분)</h3>
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="more"><span class="blind">더보기</span></a>
+            </section>
+            <section class="write">
+                <div class="wrapper">
+                    <div class="tit">
+                        <p>내가 바로 꼬마 시장님!</p>
+                        <h3>내가 <span>시장</span>이라면,</h3>
+                    </div>
+                    <div class="btn_wrap">
+                        <button class="btn_prev"><span class="blind">이전버튼</span></button>
+                        <button class="btn_next"><span class="blind">다음버튼</span></button>
+                        <a href="#" class="more"><span class="blind">더보기</span></a>
+                    </div>
+                    <div class="txt">                   
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                                <li class="swiper-slide">
+                                    <p>제가 시장이 된다면 강아지들이랑 놀 수 있는 공원을 우리 동네에도 꼭 만들 거예요.</p>
+                                    <span>2025-07-02 19:22:10</span>
+                                </li>
+                                <li class="swiper-slide">
+                                    <p>공부만 하지 말고 재미있는 체험학습을 자주 할 수 있게 해주고 싶어요!</p>
+                                    <span>2025-06-29 18:13:46</span>
+                                </li>  
+                                <li class="swiper-slide">
+                                    <p>제가 시장이 된다면, 장마철에 비 오는 날에도 까먹고 우산을 챙기지 못한 친구들이 젖지 않게 우산 빌려주는 기계를 만들어 보고 싶어요.</p>
+                                    <span>2025-05-16 15:56:28</span>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <p>우리 동네에 도서관 말고 만화책방도 생기면 좋겠어요</p>
+                                    <span>2025-04-03 14:46:10</span>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <p>제가 시장이 되면 하루에 한 번은 마을에 음악이 나오는 시간을 만들고 싶고 또 제 반려동물 강아지랑 산책할 수 있는 동물 공원도 만들고 싶어요</p>
+                                    <span>2025-03-28 20:03:11</span>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <p>제가 시장이 된다면 나무랑 풀들이 더 많이 자랄 수 있는 ‘숲속 놀이터’를 만들고 싶어요. 나무에 그네도 달고, 나뭇잎으로 지붕 만든 비밀기지도 있어요. 새들이랑 다람쥐들이 우리랑 같이 놀 수 있고, 바닥은 흙이라서 맨발로 걸어도 아이들이 놀다가 다치지 않게 바닥이 말랑한 놀이터를 우리 동네에도 꼭 만들 거예요</p>
+                                    <span>2025-03-15 12:30:45</span>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="images/write_people.png" alt="말풍선">
+                </div>
+            </section>
+            <section class="play">
+                <div class="tit">
+                    <h2>우리가 즐겁게 배우는 공간! <span>어린이 놀이터</span></h2>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="museum"><a href="#">경주 어린이 박물관</a></li>
+                        <li class="study"><a href="#">공부 도우미</a></li>
+                    </ul>
+                </div>
+            </section>
         </main>
+        <footer>
+
+        </footer>
     </div>
 </body>
 </html>
