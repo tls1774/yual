@@ -1044,21 +1044,21 @@ header .logo a {
 }
 @media screen and (max-width:1840px) {
     .write img {
-        bottom: 27.4%;
+        bottom: 32.4%;
         left: 9%;
         width: 250px;
     }
 }
 @media screen and (max-width:1560px) {
     .write img {
-        bottom: 29.3%;
+        bottom: 33.3%;
         left: 5%;
         width: 220px;
     }
 }
 @media screen and (max-width:1360px) {
     .write img {
-        bottom: 29.4%;
+        bottom: 34.4%;
         left: 3%;
         width: 210px;
     }
@@ -1069,7 +1069,7 @@ header .logo a {
         font-size: 40px;
     }
     .write img {
-        bottom: 48.4%;
+        bottom: 45.4%;
         width: 200px;
     }
 }
