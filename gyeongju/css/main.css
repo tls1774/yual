@@ -1164,7 +1164,7 @@ header .logo a {
 .play .list ul .study a::before {
     content: "";
     position: absolute;
-    top: 40px;
+    top: 57px;
     left: 50%; /* 중앙 정렬 */
     transform: translateX(-50%); /* 정확히 중앙 정렬 */
     width: 151px;

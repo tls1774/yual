@@ -50,7 +50,7 @@ $(document).ready(function(){
     
     AOS.init({
       offset: 150,
-      duration: 1000,
+      duration: 700,
       easing: 'ease',
   });
 
