@@ -976,6 +976,8 @@ header .logo a {
 @media screen and (min-width:1921px) {
     .write .shape {
         width: 50%;
+        top: 10%;
+        left: 6%;
     }
 }
 .write .tit {
