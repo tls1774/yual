@@ -47,6 +47,14 @@ $(function(){
 
 $(document).ready(function(){
 
+    
+    AOS.init({
+      offset: 150,
+      duration: 1000,
+      easing: 'ease',
+  });
+
+
     const culture_swiper = new Swiper('.culture .content .swiper', { /* 팝업을 감싼는 요소의 class명 */
     slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
     spaceBetween: 24, /* 팝업과 팝업 사이 여백 */
