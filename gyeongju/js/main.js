@@ -1,3 +1,50 @@
+let line_obj = $('.line-wrap .line path') //반드시 path
+let drag_rate = 0.5 //그림을 그리기 시작하는 화면의 위치
+let line_start
+let line_length
+let line_h
+let line_end
+let line_drag
+let scrolling
+let window_h
+
+$(function(){
+  const line_obj = $('.line-wrap .line path');
+  const drag_rate = 0.5;
+
+  let line_length = line_obj.get(0).getTotalLength();
+
+  // 초기 dasharray와 dashoffset 정확하게 세팅
+  line_obj.css({
+    'stroke-dasharray': line_length,
+    'stroke-dashoffset': line_length
+  });
+
+  function line_path() {
+    const scrolling = $(window).scrollTop();
+    const window_h = $(window).height();
+    const line_start = line_obj.offset().top;
+    const line_h = line_obj.parent('svg').height();
+    const line_end = line_start + line_h;
+    let line_drag;
+
+    if(scrolling > (line_end - window_h) + (window_h * drag_rate)) {
+      line_drag = 0;
+    } else if(scrolling > (line_start - window_h) + (window_h * drag_rate)) {
+      line_drag = line_length - line_length * ((scrolling - line_start + window_h - (window_h * drag_rate)) / line_h);
+    } else {
+      line_drag = line_length;
+    }
+
+    line_obj.css('stroke-dashoffset', line_drag);
+  }
+
+  line_path();
+
+  $(window).on('scroll resize', line_path);
+});
+
+
 $(document).ready(function(){
 
     const culture_swiper = new Swiper('.culture .content .swiper', { /* 팝업을 감싼는 요소의 class명 */

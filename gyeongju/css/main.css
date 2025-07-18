@@ -592,7 +592,7 @@ header.menu_over  {
     display: flex;
     justify-content: space-between;
     position: relative;
-
+    z-index: 1;
     flex-wrap: nowrap;
 }
 .intro .story02 .text {
@@ -778,9 +778,10 @@ header.menu_over  {
     position: relative;
 }
 .culture::before {
+    z-index: 1;
     content: "";
     position: absolute;
-    top: -100px;
+    top: -94px;
     left: 0;
     display: block;
     width: 100%;
@@ -1094,6 +1095,7 @@ header.menu_over  {
     background: url(../images/play_bg.png) no-repeat center center / cover;
     height: 1223px;
     text-align: center;
+    position: relative
 }
 .play .tit {
     color: #fff;
@@ -1110,31 +1112,126 @@ header.menu_over  {
     display: flex;
     justify-content: center;
     gap: 24px;
+    margin: 0 20px;
+}
+.play .list ul li {
+    width: 511px;
 }
 .play .list ul li a {
+    /* 기존 스타일 유지 + 필요한 부분만 수정 */
     display: block;
+    text-align: center;
     font-size: 22px;
     font-weight: 500;
     background-color: #fff;
     border-radius: 30px;
-    width: 511px;
+    width: 100%;
     padding: 198px 0 64px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative; /* 아이콘 정렬용 */
+    
+    transition: all 0.3s ease;
 }
-.play .list ul .museum,
-.play .list ul .study {
-    position: relative;
+.play .list ul li a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
 }
+
 .play .list ul .museum a::before,
 .play .list ul .study a::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 40px;
+    left: 50%; /* 중앙 정렬 */
+    transform: translateX(-50%); /* 정확히 중앙 정렬 */
     width: 151px;
     height: 112px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.play .list ul .museum a::before {
     background: url(../images/museum.png) no-repeat center center / contain;
 }
-
 .play .list ul .study a::before {
     background: url(../images/study.png) no-repeat center center / contain;
+}
+
+.play img {
+    position: absolute;
+}
+.play .pic01 {
+    bottom: 48%;
+    left: 4%;
+}
+.play .pic02 {
+    bottom: 52%;
+    right: 3%;
+    width: 7%;
+}
+.play .pic03 {
+    bottom: 4%;
+    left: 26%;
+}
+.play .pic04 {
+    bottom: -37px;
+    left: 6%;
+}
+.play .pic05 {
+    bottom: 0;
+    right: 30%;
+}
+.play .pic06 {
+    bottom: 6%;
+    right: 4%;
+}
+.play .star{
+    bottom: 60%;
+    left: 12%;
+}
+
+
+.line path {
+    stroke: #009B93; /* 선색 */
+    stroke-width: 35px; /* 선두께 */
+    stroke-linecap: round; /* 모서리 처리 - round:둥글게, butt:네모나게, square:네모나게 연장 */
+    stroke-dasharray: 30000; /* 선의 총길이 인데 애니메이션을 주기 전에 어느정도인지 값을 줘봐야함 */
+    stroke-dashoffset: 0; /* 무조건 0 */
+}
+.line-wrap {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+
+
+    display: block;
+    width: 100%;
+    height: 1700px;
+    position: absolute;
+    top: 630px;
+    z-index: 0;
+}
+
+.line {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.line path {
+    stroke: #009B93; /* 선 색상 */
+    stroke-width: 40; /* 선 두께 */
+    stroke-linecap: round;
+    fill: none;
+
+    stroke-dasharray: 4000;     /* 대충 선 길이보다 크면 됨 (나중에 JS에서 정확히 계산함) */
+    stroke-dashoffset: 0;
+}
+
+
+
+footer {
+    background-color: #1d1d1d;
+    padding: 500px 0 0 0;
 }
