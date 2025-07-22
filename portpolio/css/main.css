@@ -77,3 +77,31 @@
     font-weight: 500;
     color: #B72324;
 }
+.project {
+    background: url(../images/profile_bg.png);
+}
+.project h2 {
+    font-size: 60px;
+    color: #B72324;
+    font-weight: 700;
+    margin: 0 0 47px 0;
+}
+.project .list ul li {
+    display: flex;
+}
+
+.end {
+    background: url(../images/Group\ 53.png) no-repeat center center / cover;
+}
+.end h2 {
+    text-align: center;
+    font-size: 200px;
+    font-weight: 700;
+    padding: 225px 0 0 0;
+    color: #000;
+    mix-blend-mode: overlay;
+}
+.end p {
+    text-align: center;
+    padding: 0 0 402px 0;
+}
