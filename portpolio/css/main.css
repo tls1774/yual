@@ -2,8 +2,49 @@
 @import url(font.css);
 @import url(common.css);
 
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    padding: 0 60px;
+    padding-top: 30px;    
+    color: #B72324;
+    font-size: 20px;
+}
+header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+header .inner .gnb {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+header .inner .gnb ul {
+    display: flex;
+    justify-content: center;
+}
+header .inner .gnb ul li {
+    width: 130px;
+}
+header .inner .logo p span {
+    font-weight: 700;
+    position: relative;
+    padding-left: 20px;
+}
+header .inner .logo p span::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 1px;
+    height: 16px;
+    background-color: #D44144;
+}
+
 .main {
     background: url(../images/Group\ 53.png) no-repeat center center / cover;
+    padding: 0 0 40px 0;
 }
 .main h2 {
     text-align: center;
@@ -24,9 +65,16 @@
     padding: 6px 25px;
     color: #B72324;
 }
+.main .contact {
+    text-align: right;
+    padding: 205px 60px 0;
+    color: rgba(183, 35, 36, 0.7)
+}
+
+
 
 .profile {
-    background: url(../images/profile_bg.png);
+    background: url(../images/profile_bg.png) no-repeat center center / cover;
     padding: 114px 0 157px 0;
 }
 .profile .wrapper {
@@ -47,10 +95,21 @@
     font-weight: 600;
     color: #1d1d1d;
 }
-.profile .left .info {
-    margin: 65px 0 0 0;
+.profile .left p .dot {
+    font-size: 60px;
+    color: #B72324;
 }
-
+.profile .left .info {
+    margin: 50px 0 0 0;
+}
+.profile .left .info li {
+    display: flex;
+    gap: 15px;
+}
+.profile .left .info li strong {
+    font-weight: 700;
+    color: #1D1D1D;
+}
 .profile .photo {
     width: 243px;
     overflow: hidden;
@@ -68,6 +127,28 @@
 .profile .right .top {
     display: flex;
     gap: 75px;
+    margin-top: 40px;
+}
+.profile .right .top .education h3,
+.profile .right .top .license h3 {
+    margin: 0 0 20px 0;
+}
+.profile .right .top .education P {
+    padding-bottom: 25px;
+}
+.profile .right .top .education P strong,
+.profile .right .top .license p strong {
+    font-weight: 700;
+    color: #1D1D1D;
+}
+.profile .right .top .license p strong {
+    margin-right: 15px;
+}
+.profile .right .top .license {
+    margin-left: 66px;
+}
+.profile .right .top .license p {
+    padding-bottom: 10px;
 }
 .profile .right .bottom {
     margin: 93px 0 0 0;
@@ -76,19 +157,81 @@
     font-size: 30px;
     font-weight: 500;
     color: #B72324;
+    position: relative;
+    padding-left: 30px;
 }
+.profile .right .subtitle.red::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 11px;
+    height: 11px;
+    background-color: #B72324;
+    border-radius: 50%;
+}
+.profile .right .bottom img {
+    margin: 25px 15px 0 0;
+}
+
+
+
+
 .project {
-    background: url(../images/profile_bg.png);
+    background: url(../images/profile_bg.png) no-repeat center center / cover;
 }
 .project h2 {
     font-size: 60px;
     color: #B72324;
     font-weight: 700;
-    margin: 0 0 47px 0;
+    padding: 100px 0 47px 0;
+}
+.project .list ul {
+    padding-bottom: 190px;
+}
+.project .list ul li a {
+    display: block;
+    padding: 20px 0 30px 0;
+    position: relative;
+}
+.project .list ul li a::after {
+    position: absolute;
+    left: 70%;
+    top: 30px;
+    width: 67px;
+    height: 67px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='67' height='67' viewBox='0 0 67 67' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_79_149' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='67' height='67'%3E%3Crect width='67' height='67' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_79_149)'%3E%3Cpath d='M46.3738 35.5937H14.6562C14.0621 35.5937 13.5647 35.3932 13.1641 34.9921C12.763 34.5915 12.5625 34.0942 12.5625 33.5C12.5625 32.9058 12.763 32.4084 13.1641 32.0078C13.5647 31.6068 14.0621 31.4062 14.6562 31.4062H46.3738L37.1829 22.2154C36.7679 21.7999 36.5629 21.3139 36.568 20.7574C36.5736 20.201 36.7786 19.7061 37.1829 19.273C37.6161 18.8403 38.1135 18.6167 38.6751 18.6023C39.2371 18.5878 39.7347 18.7972 40.1679 19.2304L52.6711 31.7336C52.9326 31.9951 53.1168 32.2707 53.2238 32.5606C53.3313 32.8505 53.385 33.1636 53.385 33.5C53.385 33.8364 53.3313 34.1495 53.2238 34.4394C53.1168 34.7293 52.9326 35.0049 52.6711 35.2664L40.1679 47.7696C39.7524 48.1846 39.2594 48.3896 38.689 48.3845C38.1181 48.3789 37.6161 48.1597 37.1829 47.727C36.7786 47.2938 36.5692 46.8034 36.5548 46.2558C36.5404 45.7082 36.7497 45.2178 37.1829 44.7846L46.3738 35.5937Z' fill='%23C33234'/%3E%3C/g%3E%3C/svg%3E%0A");
+    transition: 0.5s;
+}
+.project .list ul li a:hover strong,
+.project .list ul li a:hover p {
+    color: #B72324;
 }
 .project .list ul li {
-    display: flex;
+    border-top: 1px solid #E2D1D1;
 }
+.project .list ul li:last-child {
+    border-bottom: 1px solid #E2D1D1;
+}
+.project .list ul li span {
+    font-size: 50px;
+    font-weight: 700;
+    color: #D44144;
+    margin-right: 100px;
+}
+.project .list ul li strong {
+    font-size: 30px;
+    color: #1d1d1d;
+    margin-right: 15px;
+}
+.project .list ul li P {
+    display: inline-block;
+    color: #555;
+}
+
 
 .end {
     background: url(../images/Group\ 53.png) no-repeat center center / cover;

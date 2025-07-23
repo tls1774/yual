@@ -1,9 +1,9 @@
 /* 모든페이지에 공통으로 들어가는 기본 스타일 */
 html, body {
-    font-family: "Gmarket Sans";
+    font-family: "SUITE", "Exo 2";
     /* 앞에 쓴 서체를 적용하고 지원이 안되면 두번째 서체를 적용 */
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5; /* 배수 */
     color: #555;
     word-break: keep-all; /* 스페이스기준 단어별로 줄바꿈 */
@@ -19,7 +19,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
 }
-@media screen and (max-width:1300px){ /* 20+20 = 40 + 1260 = 1300 */
+@media screen and (max-width:1480px){ /* 20+20 = 40 + 1440 = 1480 */
     .wrapper {
         width: auto;
         margin: 0 20px;
@@ -92,6 +92,6 @@ html, body {
     }
 }
 ::selection {
-    color: #fff;
-    background-color: var(--main-color);
+    color: #1d1d1d;
+    background-color: #fff;
 }
