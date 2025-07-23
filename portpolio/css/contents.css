@@ -76,7 +76,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-.samwon .detail .photo {
+.samwon .photo {
     background: url(../images/samwon_detail.png) no-repeat center center / cover;
     height: 3964px;
 }
@@ -156,7 +156,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-.gyeonju .detail .photo {
+.gyeonju .photo {
     background: url(../images/gj_detail.png) no-repeat center center / cover;
     height: 2957px;
 }
@@ -239,7 +239,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-.somnium .detail .photo {
+.somnium .photo {
     background: url(../images/som_detail.png) no-repeat center center / cover;
     height: 2439px;
 }
