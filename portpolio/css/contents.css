@@ -8,6 +8,8 @@
 .samwon .visual .wrapper {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 .samwon .visual .left .top strong {
     font-size: 120px;
@@ -18,13 +20,14 @@
     font-size: 60px;
     font-weight: 700;
     color: #006130;
+    font-family: 'Exo 2', sans-serif;
 }
 .samwon .visual .bottom {
     margin: 46px 0 0 0;
 }
 .samwon .visual .bottom strong {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     color: #006130;
 }
 .samwon .visual .bottom .date,
@@ -68,9 +71,14 @@
 }
 .samwon .visual .right .pc img {
     margin-top: 50px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-.samwon .detail .photo{
-    background-image: url(../images/samwon_detail.png) no-repeat center center / cover;
+.samwon .detail .photo {
+    background: url(../images/samwon_detail.png) no-repeat center center / cover;
+    height: 3964px;
 }
 
 /*  경주시어린이시청 */
@@ -83,6 +91,8 @@
 .gyeonju .visual .wrapper {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 .gyeonju .visual .left .top strong {
     font-size: 120px;
@@ -93,13 +103,14 @@
     font-size: 60px;
     font-weight: 700;
     color: #009B93;
+    font-family: 'NPSfont';
 }
 .gyeonju .visual .bottom {
     margin: 46px 0 0 0;
 }
 .gyeonju .visual .bottom strong {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     color: #009B93;
 }
 .gyeonju .visual .bottom .date,
@@ -124,7 +135,7 @@
 .gyeonju .visual .go a {
     border-radius: 50px;
     padding: 15px 50px;
-    display: inline-block;
+    display: block;
     position: absolute;
     right: 26%;
     bottom: 8%;
@@ -139,7 +150,15 @@
     transition: 0.3s;
 }
 .gyeonju .visual .right .pc img {
-    margin-top: 50px;
+    margin-top: 40px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.gyeonju .detail .photo {
+    background: url(../images/gj_detail.png) no-repeat center center / cover;
+    height: 2957px;
 }
 
 /* 솜니움 */
@@ -154,6 +173,8 @@
 .somnium .visual .wrapper {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 .somnium .visual .left .top strong {
     font-size: 120px;
@@ -164,13 +185,14 @@
     font-size: 60px;
     font-weight: 400;
     color: #677333;
+    font-family: 'MaruBuri';
 }
 .somnium .visual .bottom {
     margin: 46px 0 0 0;
 }
 .somnium .visual .bottom strong {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     color: #677333;
 }
 .somnium .visual .bottom .date,
@@ -210,7 +232,28 @@
     transition: 0.3s;
 }
 .somnium .visual .right .pc img {
-    width: 653px;
-    height: 456px;
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-left: 100px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.somnium .detail .photo {
+    background: url(../images/som_detail.png) no-repeat center center / cover;
+    height: 2439px;
+}
+
+
+
+@keyframes move {
+0% {
+    transform: translate(0, 0);
+}
+50% {
+    transform: translate(0, 30px);
+}
+100% {
+    transform: translate(0, 0);
+}
 }

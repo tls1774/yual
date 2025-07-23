@@ -1,6 +1,6 @@
 /* 모든페이지에 공통으로 들어가는 기본 스타일 */
 html, body {
-    font-family: "SUITE", "Exo 2";
+    font-family: "SUITE";
     /* 앞에 쓴 서체를 적용하고 지원이 안되면 두번째 서체를 적용 */
     font-size: 17px;
     font-weight: 400;
