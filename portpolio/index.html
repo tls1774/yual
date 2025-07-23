@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    <!--jquery 라이브러리-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+
     <title>포트폴리오</title>
 </head>
 <body>
@@ -13,9 +16,9 @@
             <div class="inner">
                 <nav class="gnb">
                     <ul>
-                        <li class="gnb1">Main</li>
-                        <li class="gnb2">Profile</li>
-                        <li class="gnb3">Project</li>
+                        <li class="gnb1" data-link="main"><a href="#n">Main</a></li>
+                        <li class="gnb2" data-link="profile"><a href="#n">Profile</a></li>
+                        <li class="gnb3" data-link="project"><a href="#n">Project</a></li>
                     </ul>
                 </nav>
                 <nav class="logo">
@@ -23,7 +26,7 @@
                 </nav>
             </div>
     </header>
-    <section class="main">
+    <section class="main" data-menu="main">
         <div class="tit">
             <h2>portpolio</h2>
         </div>
@@ -40,7 +43,7 @@
             <p>PHONE  010 - 4693 - 1774</p>
         </div>
     </section>
-    <section class="profile">
+    <section class="profile" data-menu="profile">
         <div class="wrapper">
             <div class="left">
                 <h2>Profile</h2>
@@ -106,7 +109,7 @@
             </div>
         </div>    
     </section>
-    <section class="project">
+    <section class="project" data-menu="project">
         <div class="wrapper">
             <h2>project.</h2>
             <div class="list">
@@ -143,11 +146,12 @@
             </div>
         </div>
     </section>
-    <section class="end">
+    <section class="end" data-menu="end">
         <div class="wrapper">
             <h2>Thank you</h2>
             <p>편리성과 목적, 그리고 균형을 잃지않는 디자이너<br>웹 표준과 웹 접근성을 잘 적용하는 웹 퍼블리셔가 되겠습니다.</p>
         </div>
     </section>
+    <div class="cursor"> click </div>
 </body>
 </html>

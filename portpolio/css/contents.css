@@ -12,12 +12,12 @@
 .samwon .visual .left .top strong {
     font-size: 120px;
     line-height: 1;
-    color: rgba(0, 102, 97, 0.21);
+    color: rgba(0, 97, 48, 0.21);
 }
 .samwon .visual .left .top h2 {
     font-size: 60px;
     font-weight: 700;
-    color: #006661;
+    color: #006130;
 }
 .samwon .visual .bottom {
     margin: 46px 0 0 0;
@@ -25,7 +25,7 @@
 .samwon .visual .bottom strong {
     font-size: 20px;
     font-weight: 800;
-    color: #006661;
+    color: #006130;
 }
 .samwon .visual .bottom .date,
 .samwon .visual .bottom .tool,
@@ -50,37 +50,27 @@
     height: 40px;
 }
 .samwon .visual .go a {
-    border: 1px solid #BCBCBC;
     border-radius: 50px;
     padding: 15px 50px;
     display: inline-block;
     position: absolute;
     right: 26%;
     bottom: 8%;
-    font-weight: 700;
     font-size: 20px;
-}
-.samwon .visual .go a:hover  {
     background-color: #008240;
     color: #fff;
+}
+.samwon .visual .go a:hover  {
+    border: 1px solid #008240;
+    background-color: #fff;
+    color: #008240;
     transition: 0.3s;
-    border: #008240;
 }
 .samwon .visual .right .pc img {
-    position: absolute;
-    right: 250px;
-    top: 198px;
-    width: 33%;
+    margin-top: 50px;
 }
-.samwon .detail .photo {
-    width: 100%;
-    text-align: center;
-    border: 1px solid red;
-}
-.samwon .detail .photo img {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
+.samwon .detail .photo{
+    background-image: url(../images/samwon_detail.png) no-repeat center center / cover;
 }
 
 /*  경주시어린이시청 */
@@ -132,7 +122,6 @@
     margin-top: 15px;
 }
 .gyeonju .visual .go a {
-    border: 1px solid #BCBCBC;
     border-radius: 50px;
     padding: 15px 50px;
     display: inline-block;
@@ -140,33 +129,17 @@
     right: 26%;
     bottom: 8%;
     font-size: 20px;
-    font-weight: 700;
-}
-.gyeonju .visual .go a:hover  {
     background-color: #009B93;
     color: #fff;
+}
+.gyeonju .visual .go a:hover  {
+    border: 1px solid #009B93;
+    background-color: #fff;
+    color: #009B93;
     transition: 0.3s;
-    border: #009B93;
 }
 .gyeonju .visual .right .pc img {
-    position: absolute;
-    right: 422px;
-    top: 175px;
-}
-.gyeonju .visual .right .pc .mob {
-    position: absolute;
-    right: 362px;
-    top: 417px;
-}
-.gyeonju .detail .photo {
-    width: 100%;
-    text-align: center;
-}
-.gyeonju .detail  img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: inline-block;
+    margin-top: 50px;
 }
 
 /* 솜니움 */
@@ -220,7 +193,6 @@
     margin-top: 15px;
 }
 .somnium .visual .go a {
-    border: 1px solid #BCBCBC;
     border-radius: 50px;
     padding: 15px 50px;
     display: inline-block;
@@ -228,32 +200,17 @@
     right: 26%;
     bottom: 16%;
     font-size: 20px;
-    font-weight: 700;
+    color: #fff;
+    background-color: #677333;
 }
 .somnium .visual .go a:hover  {
-    background-color: #677333;
-    color: #fff;
+    border: 1px solid #677333;
+    background-color: #fff;
+    color: #677333;
     transition: 0.3s;
-    border: #677333;
 }
 .somnium .visual .right .pc img {
-    position: absolute;
-    right: 276px;
-    top: 228px;
-    width: 30%;
-}
-.somnium .visual .right .pc .mob {
-    position: absolute;
-    right: 94px;
-    top: 310px;
-}
-.somnium .detail .photo {
-    width: 100%;
-    text-align: center;
-}
-.somnium .detail  img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: inline-block;
+    width: 653px;
+    height: 456px;
+    margin-top: 50px;
 }
