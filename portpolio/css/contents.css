@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    overflow-x: hidden;
 }
 .samwon .visual .left .top strong {
     font-size: 120px;
@@ -92,7 +91,6 @@
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    overflow-x: hidden;
 }
 .gyeonju .visual .left .top strong {
     font-size: 120px;
@@ -102,7 +100,7 @@
 .gyeonju .visual .left .top h2 {
     font-size: 60px;
     font-weight: 700;
-    color: #009B93;
+    color: #008E87;
     font-family: 'NPSfont';
 }
 .gyeonju .visual .bottom {
@@ -174,7 +172,6 @@
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    overflow-x: hidden;
 }
 .somnium .visual .left .top strong {
     font-size: 120px;
@@ -184,7 +181,7 @@
 .somnium .visual .left .top h2 {
     font-size: 60px;
     font-weight: 400;
-    color: #677333;
+    color: #6A782D;
     font-family: 'MaruBuri';
 }
 .somnium .visual .bottom {
