@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Split Screen Transition</title>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Pretendard', sans-serif;
+      height:100vh;
+      display:flex;
+    }
+
+    .panel {
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:2rem;
+      font-weight:600;
+      transition: all 0.6s ease;
+      cursor:pointer;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* 색상 톤 (SI/IT 전문 느낌) */
+    .planning { background:#1f2a44; }
+    .design   { background:#2e3f63; }
+    .dev      { background:#3e537c; }
+
+    /* hover 시 확장 */
+    .panel:hover {
+      flex:3;
+      font-size:3rem;
+    }
+
+    /* 설명 텍스트 */
+    .content {
+      position:absolute;
+      bottom:-100%;
+      left:0;
+      width:100%;
+      padding:20px;
+      background:rgba(0,0,0,0.6);
+      text-align:center;
+      font-size:1rem;
+      line-height:1.5;
+      transition: bottom 0.5s ease;
+    }
+    .panel:hover .content {
+      bottom:0;
+    }
+
+    /* 중앙 라인 */
+    .line {
+      position:absolute;
+      top:0; bottom:0;
+      width:2px;
+      background:rgba(255,255,255,0.3);
+      animation: pulse 2s infinite;
+    }
+    .planning .line { right:0; }
+    .design .line { left:0; right:0; margin:auto; }
+    .dev .line { left:0; }
+
+    @keyframes pulse {
+      0%,100% { opacity:0.3; }
+      50% { opacity:1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="panel planning">
+    Planning
+    <div class="line"></div>
+    <div class="content">
+      전략적 사고와 로드맵 수립으로<br>맞춤형 프로젝트를 시작합니다.
+    </div>
+  </div>
+  <div class="panel design">
+    Design
+    <div class="line"></div>
+    <div class="content">
+      직관적이고 세련된 디자인으로<br>사용자 경험을 극대화합니다.
+    </div>
+  </div>
+  <div class="panel dev">
+    Development
+    <div class="line"></div>
+    <div class="content">
+      안정적이고 확장 가능한 개발로<br>최적의 결과를 완성합니다.
+    </div>
+  </div>
+</body>
+</html>
